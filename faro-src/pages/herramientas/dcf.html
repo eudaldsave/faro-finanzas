@@ -1,0 +1,66 @@
+<!--meta title="Calculadora DCF · Faro Finanzas" desc="Estima el valor intrínseco de una acción con un descuento de flujos de caja a 5 años más valor terminal." section="herramientas" scripts="tools.js" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero page-hero--left">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="{{root}}index.html">Inicio</a> / <a href="index.html">Calculadoras</a> / DCF</p>
+      <h1>Calculadora de <span class="gold">valoración DCF</span></h1>
+      <p class="lead">Estima cuánto vale una empresa a partir del dinero que generará en el futuro.</p>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="wrap">
+      <div class="calc">
+        <form class="calc__form" id="calc" data-calc="dcf">
+          <h2>Datos de la empresa</h2>
+          <div class="field">
+            <label for="fcf">Flujo de caja libre actual (M€)</label>
+            <input type="number" id="fcf" name="fcf" step="1" value="500" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="growth">Crecimiento anual, años 1–5 (%)</label>
+            <input type="number" id="growth" name="growth" step="0.5" value="8" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="terminal">Crecimiento a perpetuidad (%)</label>
+            <input type="number" id="terminal" name="terminal" step="0.1" value="2.5" inputmode="decimal">
+            <small>Normalmente entre el 1 % y el 3 %, cerca del crecimiento de la economía.</small>
+          </div>
+          <div class="field">
+            <label for="wacc">Tasa de descuento, WACC (%)</label>
+            <input type="number" id="wacc" name="wacc" step="0.1" value="9" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="debt">Deuda neta (M€)</label>
+            <input type="number" id="debt" name="debt" step="1" value="1500" inputmode="decimal">
+            <small>Deuda financiera menos caja. Negativa si tiene más caja que deuda.</small>
+          </div>
+          <div class="field">
+            <label for="shares">Número de acciones (millones)</label>
+            <input type="number" id="shares" name="shares" min="0" step="0.1" value="100" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="price">Precio actual de la acción (€)</label>
+            <input type="number" id="price" name="price" min="0" step="0.01" value="80" inputmode="decimal">
+            <small>Opcional. Sirve para calcular el margen de seguridad.</small>
+          </div>
+          <button class="btn btn--gold" type="submit">Calcular valor →</button>
+        </form>
+        <div class="calc__out" id="calc-out" aria-live="polite"></div>
+      </div>
+
+      <div class="calc-info">
+        <h2>Cómo funciona</h2>
+        <p>Proyectamos el flujo de caja libre durante 5 años con el crecimiento que indiques. A partir del año 6 suponemos un crecimiento constante y calculamos el <strong>valor terminal</strong>. Cada flujo se trae a valor de hoy con la tasa de descuento.</p>
+        <p>Al valor de la empresa le restamos la deuda neta para obtener el valor del capital, y lo dividimos entre el número de acciones.</p>
+        <h2>Cuidado con los supuestos</h2>
+        <p>El valor terminal suele pesar más de la mitad del resultado, así que pequeños cambios en la tasa de descuento o en el crecimiento a perpetuidad lo mueven mucho. Haz siempre un escenario prudente, uno central y uno optimista.</p>
+        <p>Más en el glosario: <a class="link" href="{{root}}glosario.html#dcf">DCF</a> y <a class="link" href="{{root}}glosario.html#fcf">flujo de caja libre</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer}}

@@ -1,0 +1,59 @@
+<!--meta title="Calculadora de cartera de dividendos · Faro Finanzas" desc="Proyecta la renta por dividendos de tu cartera, reinvirtiéndolos o cobrándolos." section="herramientas" scripts="tools.js" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero page-hero--left">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="{{root}}index.html">Inicio</a> / <a href="index.html">Calculadoras</a> / Dividendos</p>
+      <h1>Calculadora de <span class="gold">cartera de dividendos</span></h1>
+      <p class="lead">Cuánta renta podría generar tu cartera y cómo cambia si reinviertes los dividendos.</p>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="wrap">
+      <div class="calc">
+        <form class="calc__form" id="calc" data-calc="dividendos">
+          <h2>Tu cartera</h2>
+          <div class="field">
+            <label for="initial">Inversión inicial (€)</label>
+            <input type="number" id="initial" name="initial" min="0" step="500" value="20000" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="monthly">Aportación mensual (€)</label>
+            <input type="number" id="monthly" name="monthly" min="0" step="25" value="300" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="yield">Rentabilidad por dividendo <output for="yield"></output></label>
+            <input type="range" id="yield" name="yield" min="0" max="10" step="0.1" value="3.5" data-fmt="pct">
+          </div>
+          <div class="field">
+            <label for="dgrowth">Crecimiento anual del dividendo <output for="dgrowth"></output></label>
+            <input type="range" id="dgrowth" name="dgrowth" min="0" max="12" step="0.5" value="5" data-fmt="pct">
+          </div>
+          <div class="field">
+            <label for="pgrowth">Revalorización anual del precio <output for="pgrowth"></output></label>
+            <input type="range" id="pgrowth" name="pgrowth" min="0" max="10" step="0.5" value="3" data-fmt="pct">
+          </div>
+          <div class="field">
+            <label for="years">Plazo <output for="years"></output></label>
+            <input type="range" id="years" name="years" min="1" max="40" step="1" value="20" data-fmt="years">
+          </div>
+          <label class="check"><input type="checkbox" name="drip" checked> Reinvertir los dividendos</label>
+          <button class="btn btn--gold" type="submit">Calcular →</button>
+        </form>
+        <div class="calc__out" id="calc-out" aria-live="polite"></div>
+      </div>
+
+      <div class="calc-info">
+        <h2>Cómo funciona</h2>
+        <p>Cada año sumamos tus aportaciones, calculamos los dividendos según la rentabilidad actual de la cartera y aplicamos la revalorización del precio. Si reinviertes, los dividendos se suman al capital; si no, se acumulan como renta cobrada.</p>
+        <h2>Rentabilidad alta no siempre es mejor</h2>
+        <p>Una rentabilidad por dividendo muy alta puede indicar que el mercado espera un recorte. Suele ser más sólido un dividendo moderado que crece año a año, pagado por una empresa con beneficios y flujo de caja suficientes.</p>
+        <p>Más en el glosario: <a class="link" href="{{root}}glosario.html#dividendo">Dividendo</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer}}

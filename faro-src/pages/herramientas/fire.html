@@ -1,0 +1,56 @@
+<!--meta title="Calculadora de independencia financiera (FIRE) · Faro Finanzas" desc="Calcula tu número FIRE, tu tasa de ahorro y cuántos años te faltan para vivir de tus inversiones." section="herramientas" scripts="tools.js" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero page-hero--left">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="{{root}}index.html">Inicio</a> / <a href="index.html">Calculadoras</a> / Independencia financiera</p>
+      <h1>Calculadora de <span class="gold">independencia financiera</span></h1>
+      <p class="lead">¿Cuánto patrimonio necesitas para cubrir tus gastos con tus inversiones, y cuánto tardarías en llegar?</p>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="wrap">
+      <div class="calc">
+        <form class="calc__form" id="calc" data-calc="fire">
+          <h2>Tu situación</h2>
+          <div class="field">
+            <label for="savings">Patrimonio invertido hoy (€)</label>
+            <input type="number" id="savings" name="savings" min="0" step="500" value="15000" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="income">Ingresos netos mensuales (€)</label>
+            <input type="number" id="income" name="income" min="0" step="50" value="2400" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="expenses">Gastos mensuales (€)</label>
+            <input type="number" id="expenses" name="expenses" min="0" step="50" value="1600" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="rate">Rentabilidad real anual <output for="rate"></output></label>
+            <input type="range" id="rate" name="rate" min="0" max="10" step="0.5" value="4" data-fmt="pct">
+            <small>Ya descontada la inflación.</small>
+          </div>
+          <div class="field">
+            <label for="withdrawal">Tasa de retirada <output for="withdrawal"></output></label>
+            <input type="range" id="withdrawal" name="withdrawal" min="2.5" max="5" step="0.25" value="4" data-fmt="pct">
+          </div>
+          <button class="btn btn--gold" type="submit">Calcular mi número FIRE →</button>
+        </form>
+        <div class="calc__out" id="calc-out" aria-live="polite"></div>
+      </div>
+
+      <div class="calc-info">
+        <h2>Cómo funciona</h2>
+        <p>Tu <strong>número FIRE</strong> es el patrimonio que, retirando cada año un porcentaje fijo, cubre tus gastos anuales. Con una tasa del 4 %, equivale a 25 veces tus gastos anuales.</p>
+        <p>Después simulamos mes a mes cómo crece tu patrimonio con lo que ahorras (ingresos menos gastos) y la rentabilidad que indicas, hasta llegar al objetivo.</p>
+        <h2>La palanca más potente</h2>
+        <p>La <strong>tasa de ahorro</strong> actúa por los dos lados: cuanto más ahorras, más rápido crece tu patrimonio y menos necesitas, porque tus gastos son menores. Prueba a bajar los gastos 100 € y mira cuántos años te ahorras.</p>
+        <p>Más en la guía <a class="link" href="{{root}}aprende/interes-compuesto.html">Interés compuesto</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer}}

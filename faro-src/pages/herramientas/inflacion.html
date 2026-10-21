@@ -1,0 +1,46 @@
+<!--meta title="Calculadora de inflación · Faro Finanzas" desc="Calcula cuánto poder adquisitivo pierde tu dinero con la inflación y cuánto necesitarás para comprar lo mismo." section="herramientas" scripts="tools.js" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero page-hero--left">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="{{root}}index.html">Inicio</a> / <a href="index.html">Calculadoras</a> / Inflación</p>
+      <h1>Calculadora de <span class="gold">inflación</span></h1>
+      <p class="lead">El dinero quieto no se mantiene: pierde valor cada año. Mira cuánto.</p>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="wrap">
+      <div class="calc">
+        <form class="calc__form" id="calc" data-calc="inflacion">
+          <h2>Tus datos</h2>
+          <div class="field">
+            <label for="amount">Importe actual (€)</label>
+            <input type="number" id="amount" name="amount" min="0" step="100" value="10000" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="years">Años <output for="years"></output></label>
+            <input type="range" id="years" name="years" min="1" max="40" step="1" value="10" data-fmt="years">
+          </div>
+          <div class="field">
+            <label for="inflation">Inflación anual media <output for="inflation"></output></label>
+            <input type="range" id="inflation" name="inflation" min="0" max="10" step="0.1" value="3" data-fmt="pct">
+          </div>
+          <button class="btn btn--gold" type="submit">Calcular impacto →</button>
+        </form>
+        <div class="calc__out" id="calc-out" aria-live="polite"></div>
+      </div>
+
+      <div class="calc-info">
+        <h2>Cómo funciona</h2>
+        <p>Dividimos tu importe entre (1 + inflación) elevado al número de años. El resultado es lo que podrás comprar con ese dinero, expresado en euros de hoy.</p>
+        <h2>Cómo protegerse</h2>
+        <p>Para mantener el poder de compra, tu dinero tiene que crecer al menos al ritmo de la inflación después de comisiones e impuestos. A largo plazo, los activos productivos, como empresas o bonos indexados a la inflación, han tendido a hacerlo mejor que el efectivo.</p>
+        <p>Más en el glosario: <a class="link" href="{{root}}glosario.html#inflacion">Inflación</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer}}

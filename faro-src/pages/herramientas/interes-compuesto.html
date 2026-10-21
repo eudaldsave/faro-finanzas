@@ -1,0 +1,50 @@
+<!--meta title="Calculadora de interés compuesto · Faro Finanzas" desc="Calcula cuánto crece tu dinero con interés compuesto y aportaciones mensuales. Gráfico año a año." section="herramientas" scripts="tools.js" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero page-hero--left">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="{{root}}index.html">Inicio</a> / <a href="index.html">Calculadoras</a> / Interés compuesto</p>
+      <h1>Calculadora de <span class="gold">interés compuesto</span></h1>
+      <p class="lead">Mueve los controles y mira cómo crece tu dinero cuando los rendimientos se reinvierten.</p>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="wrap">
+      <div class="calc">
+        <form class="calc__form" id="calc" data-calc="interes-compuesto">
+          <h2>Tus datos</h2>
+          <div class="field">
+            <label for="capital">Capital inicial <output for="capital"></output></label>
+            <input type="range" id="capital" name="capital" min="0" max="100000" step="500" value="10000" data-fmt="eur">
+          </div>
+          <div class="field">
+            <label for="monthly">Aportación mensual <output for="monthly"></output></label>
+            <input type="range" id="monthly" name="monthly" min="0" max="2000" step="25" value="200" data-fmt="eur">
+          </div>
+          <div class="field">
+            <label for="rate">Rentabilidad anual <output for="rate"></output></label>
+            <input type="range" id="rate" name="rate" min="0" max="15" step="0.5" value="6" data-fmt="pct">
+          </div>
+          <div class="field">
+            <label for="years">Plazo <output for="years"></output></label>
+            <input type="range" id="years" name="years" min="1" max="50" step="1" value="25" data-fmt="years">
+          </div>
+          <button class="btn btn--gold" type="submit">Calcular →</button>
+        </form>
+        <div class="calc__out" id="calc-out" aria-live="polite"></div>
+      </div>
+
+      <div class="calc-info">
+        <h2>Cómo funciona</h2>
+        <p>Cada mes se suma tu aportación y el saldo crece a la rentabilidad mensual equivalente a la anual que elijas. La parte dorada del gráfico es lo que genera el propio dinero; la gris, lo que has puesto tú.</p>
+        <h2>Qué rentabilidad usar</h2>
+        <p>Para una cartera diversificada de acciones a largo plazo, muchos inversores usan entre un 5 % y un 7 % anual como hipótesis prudente. Si quieres pensar en euros de hoy, réstale la inflación esperada.</p>
+        <p>¿Quieres entender la teoría? Lee la guía <a class="link" href="{{root}}aprende/interes-compuesto.html">Interés compuesto: por qué el tiempo importa más que la cantidad</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer}}

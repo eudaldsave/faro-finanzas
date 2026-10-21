@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "faro",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["faro-server/server.mjs"],
+      "port": 5173
+    }
+  ]
+}

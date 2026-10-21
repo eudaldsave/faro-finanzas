@@ -1,0 +1,286 @@
+<!--meta title="Faro Finanzas · Aprende a invertir con un tutor con IA" desc="Faro Finanzas: un itinerario guiado de educación financiera con Lumen, tu tutor con IA. Empieza gratis." scripts="home.js" -->
+{{> header}}
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="wrap hero__grid">
+      <div class="hero__copy reveal">
+        <span class="pill">✦ Nivel inicial gratis · sin datos de pago</span>
+        <h1>Invierte sabiendo <span class="gold">qué estás haciendo</span></h1>
+        <p class="lead">Lumen es un tutor con IA que adapta cada lección a lo que ya sabes. Empiezas por lo básico y avanzas hasta leer balances, valorar empresas y montar tu propia cartera.</p>
+        <div class="hero__ctas">
+          <a class="btn btn--gold btn--lg" href="#test">Haz el test de nivel →</a>
+          <a class="btn btn--ghost btn--lg" href="#pasos">Ver cómo funciona</a>
+        </div>
+        <ul class="hero__stats">
+          <li><strong>5</strong><span>módulos</span></li>
+          <li><strong>60+</strong><span>lecciones</span></li>
+          <li><strong>24/7</strong><span>tutor disponible</span></li>
+        </ul>
+      </div>
+
+      <div class="chat reveal" aria-label="Demostración del tutor Lumen">
+        <div class="chat__head">
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <img src="{{root}}assets/logo.svg" alt="" width="28" height="28">
+          <div>
+            <strong>Lumen</strong>
+            <small class="online">● Disponible</small>
+          </div>
+        </div>
+        <div class="chat__tabs" role="tablist" aria-label="Módulos de ejemplo">
+          <button role="tab" aria-selected="true" data-tab="0"><b>1</b>Contabilidad</button>
+          <button role="tab" aria-selected="false" data-tab="1"><b>2</b>Valoración</button>
+          <button role="tab" aria-selected="false" data-tab="2"><b>3</b>Riesgo</button>
+          <button role="tab" aria-selected="false" data-tab="3"><b>4</b>Cartera</button>
+          <button role="tab" aria-selected="false" data-tab="4"><b>5</b>Macro</button>
+        </div>
+        <div class="chat__body" id="chat-body" role="log" aria-live="polite"></div>
+        <form class="chat__input" id="chat-form" autocomplete="off">
+          <label class="sr-only" for="chat-text">Pregúntale a Lumen</label>
+          <input id="chat-text" type="text" maxlength="200" placeholder="Pregúntale a Lumen… (ej. ¿qué es un ETF?)">
+          <button type="submit" aria-label="Enviar pregunta">↑</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIO -->
+  <section class="section section--light" id="precio">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="eyebrow">Precio</span>
+        <h2>Un solo pago. Ninguna cuota mensual.</h2>
+        <p>Prueba el primer módulo gratis. Si te convence, desbloqueas el resto para siempre.</p>
+      </div>
+      <div class="plans">
+        <article class="plan reveal">
+          <h3>Inicial</h3>
+          <p class="plan__price">0 €</p>
+          <p class="plan__note">Para siempre</p>
+          <ul>
+            <li>Módulo 1 completo</li>
+            <li>Test de nivel e informe</li>
+            <li>20 preguntas al día a Lumen</li>
+          </ul>
+          <a class="btn btn--outline" href="{{root}}app/login.html?tab=registro">Empezar</a>
+        </article>
+        <article class="plan plan--featured reveal">
+          <span class="plan__badge">Más elegido</span>
+          <h3>Completo</h3>
+          <p class="plan__price">89 €</p>
+          <p class="plan__note">Pago único · acceso de por vida</p>
+          <ul>
+            <li>Los 5 módulos y sus ejercicios</li>
+            <li>Preguntas ilimitadas a Lumen</li>
+            <li>Simulador de carteras</li>
+            <li>Certificado verificable</li>
+          </ul>
+          <a class="btn btn--gold" href="{{root}}precios.html">Desbloquear todo</a>
+        </article>
+      </div>
+      <p class="center-link reveal"><a href="{{root}}precios.html">Ver la comparativa completa de planes →</a></p>
+    </div>
+  </section>
+
+  <!-- COMPARATIVA -->
+  <section class="section" id="comparativa">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="eyebrow">Por qué un tutor</span>
+        <h2>Un chatbot te da una respuesta. Lumen te enseña a encontrarla.</h2>
+      </div>
+      <div class="compare reveal" role="table" aria-label="Comparativa">
+        <div class="compare__row compare__row--head" role="row">
+          <span role="columnheader"></span>
+          <span role="columnheader">Chatbot genérico</span>
+          <span role="columnheader" class="gold">Lumen</span>
+        </div>
+        <div class="compare__row" role="row"><span role="rowheader">Sabe tu nivel</span><span role="cell" class="no">No</span><span role="cell" class="yes">Sí, por el test inicial</span></div>
+        <div class="compare__row" role="row"><span role="rowheader">Orden de aprendizaje</span><span role="cell" class="no">Lo eliges tú</span><span role="cell" class="yes">Itinerario de 5 módulos</span></div>
+        <div class="compare__row" role="row"><span role="rowheader">Ejercicios con datos</span><span role="cell" class="no">Ocasionales</span><span role="cell" class="yes">En cada lección</span></div>
+        <div class="compare__row" role="row"><span role="rowheader">Seguimiento del progreso</span><span role="cell" class="no">No</span><span role="cell" class="yes">Informe por módulo</span></div>
+        <div class="compare__row" role="row"><span role="rowheader">Certificado</span><span role="cell" class="no">No</span><span role="cell" class="yes">Sí, verificable</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section section--light" id="opiniones">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="eyebrow">Opiniones</span>
+        <h2>Lo que cuentan los alumnos</h2>
+        <p class="placeholder-note">Textos de ejemplo: sustitúyelos por opiniones reales antes de publicar.</p>
+      </div>
+      <div class="quotes">
+        <figure class="quote reveal">
+          <div class="stars" aria-label="5 de 5">★★★★★</div>
+          <blockquote>“[Opinión de ejemplo] Por fin entiendo qué mirar en una cuenta de resultados antes de comprar una acción.”</blockquote>
+          <figcaption><span class="avatar">A</span>Alumno de ejemplo · Módulo 2</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <div class="stars" aria-label="5 de 5">★★★★★</div>
+          <blockquote>“[Opinión de ejemplo] Los ejercicios con números reales hacen que la teoría se quede.”</blockquote>
+          <figcaption><span class="avatar">B</span>Alumna de ejemplo · Módulo 4</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <div class="stars" aria-label="4 de 5">★★★★☆</div>
+          <blockquote>“[Opinión de ejemplo] Me gusta poder preguntar a cualquier hora sin sentir que es una pregunta tonta.”</blockquote>
+          <figcaption><span class="avatar">C</span>Alumno de ejemplo · Módulo 1</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASOS -->
+  <section class="section" id="pasos">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="eyebrow">Cómo funciona</span>
+        <h2>Tres pasos para pasar de curioso a inversor informado</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__n">01</span>
+          <h3>Mide tu punto de partida</h3>
+          <p>Un test corto sitúa tu nivel para que no repitas lo que ya sabes.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__n">02</span>
+          <h3>Aprende con Lumen</h3>
+          <p>Lecciones breves, ejemplos con empresas y dudas resueltas al momento.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__n">03</span>
+          <h3>Demuestra lo aprendido</h3>
+          <p>Supera la prueba final de cada módulo y consigue tu certificado.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- MÓDULOS -->
+  <section class="section section--light" id="modulos">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="eyebrow">Temario</span>
+        <h2>Cinco módulos, de lo básico a lo profesional</h2>
+      </div>
+      <div class="modules">
+        <details class="module reveal" open>
+          <summary><span class="module__n">1</span><span><strong>Contabilidad para inversores</strong><small>12 lecciones · nivel inicial · gratis</small></span><i aria-hidden="true">+</i></summary>
+          <ul><li>Balance, cuenta de resultados y flujo de caja</li><li>Márgenes y rentabilidad sobre el capital</li><li>Señales de alerta en las cuentas</li></ul>
+        </details>
+        <details class="module reveal">
+          <summary><span class="module__n">2</span><span><strong>Cuánto vale una empresa</strong><small>14 lecciones · nivel medio</small></span><i aria-hidden="true">+</i></summary>
+          <ul><li>Múltiplos: PER, EV/EBITDA, precio/valor contable</li><li>Descuento de flujos paso a paso</li><li>Margen de seguridad</li></ul>
+        </details>
+        <details class="module reveal">
+          <summary><span class="module__n">3</span><span><strong>Riesgo y volatilidad</strong><small>11 lecciones · nivel medio</small></span><i aria-hidden="true">+</i></summary>
+          <ul><li>Volatilidad, caídas máximas y correlación</li><li>Tamaño de posición</li><li>Sesgos que nos hacen perder dinero</li></ul>
+        </details>
+        <details class="module reveal">
+          <summary><span class="module__n">4</span><span><strong>Diseña tu cartera</strong><small>13 lecciones · nivel avanzado</small></span><i aria-hidden="true">+</i></summary>
+          <ul><li>Asignación de activos según tu horizonte</li><li>Fondos indexados frente a acciones individuales</li><li>Rebalanceo y costes</li></ul>
+        </details>
+        <details class="module reveal">
+          <summary><span class="module__n">5</span><span><strong>Economía y ciclos</strong><small>10 lecciones · nivel avanzado</small></span><i aria-hidden="true">+</i></summary>
+          <ul><li>Tipos de interés e inflación</li><li>Cómo leer un dato macro sin ruido</li><li>Ciclos económicos y sectores</li></ul>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEST DE NIVEL -->
+  <section class="section" id="test">
+    <div class="wrap test">
+      <div class="test__intro reveal">
+        <span class="eyebrow">Test de nivel</span>
+        <h2>Tres preguntas para saber por dónde empezar</h2>
+        <p>Sin registro. Al terminar verás una vista previa de tu informe.</p>
+      </div>
+      <div class="quiz reveal" id="quiz">
+        <div class="quiz__progress"><span id="quiz-bar"></span></div>
+        <div id="quiz-stage"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFORME + CREDENCIAL -->
+  <section class="section section--light" id="credencial">
+    <div class="wrap duo">
+      <div class="report reveal">
+        <span class="eyebrow">Tu informe</span>
+        <h2>Sabes qué dominas y qué te falta</h2>
+        <p>Después de cada módulo, Lumen te prepara un resumen con tus puntos fuertes y los temas que conviene repasar.</p>
+        <div class="bars">
+          <div class="bar"><span>Contabilidad</span><div><i style="--v:82%"></i></div><b>82%</b></div>
+          <div class="bar"><span>Valoración</span><div><i style="--v:64%"></i></div><b>64%</b></div>
+          <div class="bar"><span>Riesgo</span><div><i style="--v:47%"></i></div><b>47%</b></div>
+        </div>
+      </div>
+      <div class="cert reveal" aria-label="Ejemplo de certificado">
+        <div class="cert__top">
+          <img src="{{root}}assets/logo.svg" alt="" width="36" height="36">
+          <span>Certificado de competencia</span>
+        </div>
+        <p class="cert__name">Tu nombre aquí</p>
+        <p class="cert__desc">ha completado el itinerario <strong>Inversor informado</strong> de Faro Finanzas</p>
+        <div class="cert__foot">
+          <span>ID · FF-2026-0000</span>
+          <span class="seal">✓ Verificable</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURSOS GRATIS -->
+  <section class="section" id="recursos">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <span class="eyebrow">Gratis y sin registro</span>
+        <h2>Material abierto para que empieces hoy</h2>
+        <p>Antes de pagar nada, usa lo que ya tenemos publicado.</p>
+      </div>
+      <div class="resources">
+        <a class="resource reveal" href="{{root}}glosario.html"><span class="resource__icon">Aa</span><strong>Glosario</strong><p>Los términos que aparecen en cualquier informe financiero, explicados con ejemplos.</p><em>Abrir glosario →</em></a>
+        <a class="resource reveal" href="{{root}}aprende/index.html"><span class="resource__icon">📚</span><strong>Centro de aprendizaje</strong><p>Guías cortas para ir de la teoría a la práctica, ordenadas por tema.</p><em>Ver guías →</em></a>
+        <a class="resource reveal" href="{{root}}herramientas/index.html"><span class="resource__icon">∑</span><strong>Calculadoras</strong><p>Interés compuesto, PER, inflación, DCF, independencia financiera y más.</p><em>Calcular →</em></a>
+        <a class="resource reveal" href="{{root}}guia/5-ideas.html"><span class="resource__icon">📘</span><strong>Guía en PDF</strong><p>Cinco ideas que conviene tener claras antes de invertir el primer euro.</p><em>Descargar →</em></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--light" id="faq">
+    <div class="wrap narrow">
+      <div class="section__head reveal">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Lo que suelen preguntarnos</h2>
+      </div>
+      <div class="faq faq--light">
+        <details class="reveal"><summary>¿Necesito saber algo antes de empezar?</summary><p>No. El test inicial detecta tu nivel y, si partes de cero, Lumen empieza por los conceptos básicos.</p></details>
+        <details class="reveal"><summary>¿Lumen me dice en qué invertir?</summary><p>No. Faro Finanzas es formación: te enseña a analizar por tu cuenta. No da recomendaciones personalizadas de inversión.</p></details>
+        <details class="reveal"><summary>¿Hay suscripción?</summary><p>No. El nivel inicial es gratis y el acceso completo es un pago único.</p></details>
+        <details class="reveal"><summary>¿Cuánto tiempo necesito?</summary><p>Las lecciones duran entre 10 y 15 minutos. Con 3 sesiones por semana, el itinerario completo lleva unos 4 meses.</p></details>
+        <details class="reveal"><summary>¿Puedo pedir un reembolso?</summary><p>Sí, durante los 14 días siguientes a la compra si no has completado más de un módulo de pago.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta">
+    <div class="wrap cta__inner reveal">
+      <h2>Entender el dinero no debería ser un privilegio.</h2>
+      <p>Empieza hoy con el nivel gratuito y decide después.</p>
+      <a class="btn btn--gold btn--lg" href="{{root}}app/login.html?tab=registro">Empieza gratis →</a>
+    </div>
+  </section>
+
+</main>
+
+{{> footer}}

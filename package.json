@@ -1,0 +1,16 @@
+{
+  "name": "faro-finanzas",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node faro-src/build.cjs",
+    "check": "node faro-src/check-links.cjs",
+    "start": "node faro-src/build.cjs && node faro-server/server.mjs"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.0.0"
+  }
+}

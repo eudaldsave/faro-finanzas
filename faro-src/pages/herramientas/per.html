@@ -1,0 +1,48 @@
+<!--meta title="Calculadora PER · Faro Finanzas" desc="Calcula el PER de una acción, su rentabilidad de beneficios y el PEG frente al crecimiento esperado." section="herramientas" scripts="tools.js" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero page-hero--left">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="{{root}}index.html">Inicio</a> / <a href="index.html">Calculadoras</a> / PER</p>
+      <h1>Calculadora de <span class="gold">PER</span></h1>
+      <p class="lead">Averigua cuántos años de beneficios estás pagando al comprar una acción.</p>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="wrap">
+      <div class="calc">
+        <form class="calc__form" id="calc" data-calc="per">
+          <h2>Datos de la acción</h2>
+          <div class="field">
+            <label for="price">Precio de la acción (€)</label>
+            <input type="number" id="price" name="price" min="0" step="0.01" value="45" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="eps">Beneficio por acción, BPA (€)</label>
+            <input type="number" id="eps" name="eps" step="0.01" value="3" inputmode="decimal">
+            <small>Beneficio neto de los últimos 12 meses dividido entre el número de acciones.</small>
+          </div>
+          <div class="field">
+            <label for="growth">Crecimiento anual esperado del BPA (%)</label>
+            <input type="number" id="growth" name="growth" step="0.5" value="8" inputmode="decimal">
+            <small>Opcional. Sirve para calcular el PEG.</small>
+          </div>
+          <button class="btn btn--gold" type="submit">Calcular PER →</button>
+        </form>
+        <div class="calc__out" id="calc-out" aria-live="polite"></div>
+      </div>
+
+      <div class="calc-info">
+        <h2>Cómo leer el resultado</h2>
+        <p>El <strong>PER</strong> divide el precio entre el beneficio por acción. Un PER de 15 significa que, si los beneficios no cambiaran, tardarías 15 años en «recuperar» lo pagado.</p>
+        <p>La <strong>rentabilidad de beneficios</strong> es la inversa del PER: qué porcentaje del precio representa el beneficio anual. Es útil para compararla con el interés de un bono.</p>
+        <p>El <strong>PEG</strong> divide el PER entre el crecimiento esperado. Por debajo de 1 suele indicar que el precio es razonable para ese crecimiento; muy por encima, que el mercado ya lo descuenta todo.</p>
+        <p>Más en el glosario: <a class="link" href="{{root}}glosario.html#per">PER</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer}}

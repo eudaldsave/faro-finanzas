@@ -1,0 +1,8 @@
+node_modules/
+# Web generada: se crea con `npm run build` (Vercel la genera en cada despliegue)
+faro/
+.vercel/
+.env
+.env.*
+.claude/settings.local.json
+*.log

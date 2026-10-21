@@ -1,0 +1,60 @@
+<!--meta title="Simulador de cartera · Faro Finanzas" desc="Reparte tu cartera entre acciones, bonos, oro y liquidez y estima su rentabilidad, volatilidad y rango de resultados." section="herramientas" scripts="tools.js" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero page-hero--left">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="{{root}}index.html">Inicio</a> / <a href="index.html">Calculadoras</a> / Simulador de cartera</p>
+      <h1>Simulador de <span class="gold">cartera</span></h1>
+      <p class="lead">Cambia el reparto entre activos y mira cómo cambian la rentabilidad esperada, el riesgo y el rango de resultados.</p>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="wrap">
+      <div class="calc">
+        <form class="calc__form" id="calc" data-calc="simulador-cartera">
+          <h2>Tu reparto</h2>
+          <div class="field">
+            <label for="stocks">Acciones globales <output for="stocks"></output></label>
+            <input type="range" id="stocks" name="stocks" min="0" max="100" step="5" value="60" data-fmt="pct">
+          </div>
+          <div class="field">
+            <label for="bonds">Bonos <output for="bonds"></output></label>
+            <input type="range" id="bonds" name="bonds" min="0" max="100" step="5" value="30" data-fmt="pct">
+          </div>
+          <div class="field">
+            <label for="gold">Oro <output for="gold"></output></label>
+            <input type="range" id="gold" name="gold" min="0" max="100" step="5" value="5" data-fmt="pct">
+          </div>
+          <div class="field">
+            <label for="cash">Liquidez <output for="cash"></output></label>
+            <input type="range" id="cash" name="cash" min="0" max="100" step="5" value="5" data-fmt="pct">
+          </div>
+          <p class="alloc__sum" id="alloc-sum"></p>
+          <div class="field">
+            <label for="amount">Importe inicial (€)</label>
+            <input type="number" id="amount" name="amount" min="0" step="1000" value="20000" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="years">Horizonte <output for="years"></output></label>
+            <input type="range" id="years" name="years" min="1" max="40" step="1" value="15" data-fmt="years">
+          </div>
+          <button class="btn btn--gold" type="submit">Simular →</button>
+        </form>
+        <div class="calc__out" id="calc-out" aria-live="polite"></div>
+      </div>
+
+      <div class="calc-info">
+        <h2>Qué supuestos usa</h2>
+        <p>El simulador asigna a cada clase de activo una rentabilidad y una volatilidad anuales orientativas (acciones 7 % y 17 %, bonos 3 % y 6 %, oro 4 % y 15 %, liquidez 2 % y 1 %) y unas correlaciones bajas entre ellas. Con eso estima la rentabilidad y el riesgo de la combinación.</p>
+        <p>Son hipótesis redondas para aprender, no datos históricos ni previsiones. Cámbialas en el código si quieres usar las tuyas.</p>
+        <h2>Lo que muestra</h2>
+        <p>La línea es el escenario central y la banda, el rango donde caería el resultado en 8 de cada 10 casos según esos supuestos. Fíjate en cómo la banda se ensancha con más acciones: más rentabilidad esperada, pero un camino menos predecible.</p>
+        <p>Más en la guía <a class="link" href="{{root}}aprende/riesgo-y-volatilidad.html">Riesgo y volatilidad</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer}}

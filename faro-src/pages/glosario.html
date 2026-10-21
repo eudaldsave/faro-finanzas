@@ -1,0 +1,45 @@
+<!--meta title="Glosario financiero · Faro Finanzas" desc="Glosario de inversión explicado con ejemplos: PER, DCF, EBITDA, volatilidad, ETF, inflación y más." section="glosario" scripts="glossary.js" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <span class="pill">Glosario</span>
+      <h1>Las palabras de las finanzas, <span class="gold">en cristiano</span></h1>
+      <p class="lead">Cada término con una definición corta, su fórmula cuando la tiene y un ejemplo con números.</p>
+      <div class="search">
+        <label class="sr-only" for="term-search">Buscar término</label>
+        <input id="term-search" type="search" placeholder="Busca un término… (PER, EBITDA, volatilidad)" autocomplete="off">
+      </div>
+      <div class="filters" id="term-filters" role="group" aria-label="Filtrar por categoría">
+        <button type="button" aria-pressed="true" data-cat="todos">Todos</button>
+        <button type="button" aria-pressed="false" data-cat="basico">Básico</button>
+        <button type="button" aria-pressed="false" data-cat="valoracion">Valoración</button>
+        <button type="button" aria-pressed="false" data-cat="ratios">Ratios</button>
+        <button type="button" aria-pressed="false" data-cat="riesgo">Riesgo</button>
+        <button type="button" aria-pressed="false" data-cat="carteras">Carteras</button>
+        <button type="button" aria-pressed="false" data-cat="macro">Macro</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="wrap">
+      <nav class="az" id="az" aria-label="Índice alfabético"></nav>
+      <p class="results-count" id="term-count" aria-live="polite"></p>
+      <div class="terms" id="terms"></div>
+      <p class="empty" id="term-empty" hidden>No hay ningún término que coincida. Prueba con otra palabra o pregúntaselo a Lumen.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap cta__inner reveal">
+      <h2>Saber la definición no es saber usarla.</h2>
+      <p>En los módulos practicas cada concepto con cuentas de empresas y Lumen corrige tus respuestas.</p>
+      <a class="btn btn--gold btn--lg" href="{{root}}app/login.html?tab=registro">Practicar gratis →</a>
+    </div>
+  </section>
+</main>
+
+{{> footer}}

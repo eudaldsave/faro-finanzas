@@ -1,0 +1,112 @@
+<!--meta title="Guía gratis: 5 ideas antes de invertir · Faro Finanzas" desc="Guía gratuita con cinco ideas que conviene entender antes de invertir el primer euro." scripts="guide.js" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="wrap gate">
+      <div class="reveal">
+        <span class="pill">Guía gratuita</span>
+        <h1>5 ideas que conviene entender <span class="gold">antes de invertir un euro</span></h1>
+        <p class="lead">Una guía corta, con ejemplos numéricos, para evitar los errores más caros de quien empieza.</p>
+        <ul class="gate__list">
+          <li><b>1</b>Rentabilidad y riesgo van siempre juntos</li>
+          <li><b>2</b>El tiempo pesa más que la cantidad</li>
+          <li><b>3</b>Las comisiones también se componen</li>
+          <li><b>4</b>Diversificar es repartir entre cosas distintas</li>
+          <li><b>5</b>Tu peor enemigo eres tú en una caída</li>
+        </ul>
+      </div>
+      <form class="gate__form reveal" id="gate-form" novalidate>
+        <h2>Recíbela gratis</h2>
+        <div class="field">
+          <label for="gate-name">Nombre</label>
+          <input type="text" id="gate-name" name="name" autocomplete="given-name" required>
+        </div>
+        <div class="field">
+          <label for="gate-email">Correo electrónico</label>
+          <input type="email" id="gate-email" name="email" autocomplete="email" required>
+        </div>
+        <label class="check"><input type="checkbox" id="gate-consent" required> <span>Acepto la <a href="{{root}}legal/privacidad.html">política de privacidad</a> y recibir la guía y novedades por email. Puedo darme de baja cuando quiera.</span></label>
+        <button class="btn btn--gold" type="submit">Quiero la guía →</button>
+        <p class="form-msg" id="gate-msg" role="alert"></p>
+        <p class="note">Demo: este formulario no envía datos todavía. Conéctalo a tu servicio de email antes de publicar.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="guide wrap" id="guide" hidden tabindex="-1">
+      <div class="section__head">
+        <span class="eyebrow">Tu guía</span>
+        <h2 id="guide-title">Aquí la tienes</h2>
+        <p>Léela aquí o guárdala como PDF con el botón de imprimir.</p>
+        <button class="btn btn--outline" type="button" id="guide-print">Guardar como PDF</button>
+      </div>
+
+      <div class="guide__item">
+        <span class="guide__n">1</span>
+        <div>
+          <h2>Rentabilidad y riesgo van siempre juntos</h2>
+          <p>No existe una inversión con alta rentabilidad y sin riesgo. Si alguien te la ofrece, o no la entiendes o no es lo que parece. Cuanto más puede subir algo, más puede bajar por el camino.</p>
+          <table>
+            <thead><tr><th>Activo (orientativo)</th><th>Rentabilidad esperada</th><th>Caídas posibles</th></tr></thead>
+            <tbody>
+              <tr><td>Depósito o liquidez</td><td>Baja</td><td>Casi nulas</td></tr>
+              <tr><td>Bonos de calidad</td><td>Baja–media</td><td>Moderadas</td></tr>
+              <tr><td>Acciones diversificadas</td><td>Media–alta</td><td>Pueden superar el 30 %</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="guide__item">
+        <span class="guide__n">2</span>
+        <div>
+          <h2>El tiempo pesa más que la cantidad</h2>
+          <p>Con interés compuesto, los años trabajan por ti. 200 € al mes durante 10 años empezando a los 25 pueden acabar valiendo casi lo mismo a los 65 que 200 € al mes durante 30 años empezando a los 35 (al 6 % anual: unos 186.600 € frente a unos 194.900 €).</p>
+          <p>Prueba tus números en la <a href="{{root}}herramientas/interes-compuesto.html">calculadora de interés compuesto</a>.</p>
+        </div>
+      </div>
+
+      <div class="guide__item">
+        <span class="guide__n">3</span>
+        <div>
+          <h2>Las comisiones también se componen</h2>
+          <p>Una comisión anual del 1,5 % frente a una del 0,2 % parece poca diferencia. Sobre 10.000 € a 30 años con una rentabilidad bruta del 7 %, supone acabar con unos 49.800 € en lugar de unos 72.000 €.</p>
+        </div>
+      </div>
+
+      <div class="guide__item">
+        <span class="guide__n">4</span>
+        <div>
+          <h2>Diversificar es repartir entre cosas distintas</h2>
+          <p>Tener cinco fondos que invierten en las mismas empresas no es diversificar. Lo que reduce el riesgo es combinar activos, sectores y regiones que no se mueven a la vez.</p>
+          <table>
+            <thead><tr><th>Cartera</th><th>Empresas</th><th>Dependencia de una sola</th></tr></thead>
+            <tbody>
+              <tr><td>3 acciones</td><td>3</td><td>Muy alta</td></tr>
+              <tr><td>Fondo de un país</td><td>~100</td><td>Media</td></tr>
+              <tr><td>Fondo mundial</td><td>&gt; 1.500</td><td>Muy baja</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="guide__item">
+        <span class="guide__n">5</span>
+        <div>
+          <h2>Tu peor enemigo eres tú en una caída</h2>
+          <p>Las pérdidas más grandes de muchos inversores no vienen del mercado, sino de vender por miedo en el peor momento. Decide tu reparto antes de que llegue la caída, ten un fondo de emergencia y automatiza tus aportaciones.</p>
+          <p>Si una caída del 30 % te haría vender, probablemente tu cartera tiene más riesgo del que te conviene.</p>
+        </div>
+      </div>
+
+      <div class="center-link">
+        <a class="btn btn--gold btn--lg" href="{{root}}index.html#test">Siguiente paso: haz el test de nivel →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer}}

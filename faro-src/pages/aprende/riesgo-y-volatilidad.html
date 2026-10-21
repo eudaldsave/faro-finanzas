@@ -1,0 +1,85 @@
+<!--meta title="Riesgo y volatilidad explicados · Faro Finanzas" desc="Qué miden la volatilidad, la beta y las caídas máximas, y por qué recuperar una pérdida cuesta más que sufrirla." section="aprende" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero page-hero--left">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="{{root}}index.html">Inicio</a> / <a href="index.html">Aprende</a> / Riesgo y volatilidad</p>
+      <span class="pill">Riesgo</span>
+      <h1>Riesgo y volatilidad: <span class="gold">qué miden y qué no</span></h1>
+      <p class="meta-line">9 min de lectura · Equipo de Faro Finanzas</p>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="wrap article">
+      <article class="prose">
+        <h2 id="riesgo">Qué entendemos por riesgo</h2>
+        <p>En inversión, riesgo no es solo «perder dinero». Es la posibilidad de que el resultado sea distinto del esperado, y sobre todo la de tener que vender en mal momento porque necesitas el dinero o porque no soportas ver la caída.</p>
+
+        <h2 id="volatilidad">Volatilidad</h2>
+        <p>La volatilidad mide cuánto oscilan los rendimientos alrededor de su media. Se calcula como la desviación típica de los rendimientos y se expresa en porcentaje anual.</p>
+        <p>Como referencia aproximada, las acciones de un índice amplio suelen moverse con una volatilidad del 15–20 % anual y los bonos a corto plazo con bastante menos. Más volatilidad significa un camino más accidentado, no necesariamente un peor destino.</p>
+
+        <h2 id="caidas">Las caídas no son simétricas</h2>
+        <p>Esta es quizá la idea más importante de la guía. Después de perder, necesitas una subida mayor para volver al punto de partida:</p>
+        <table>
+          <thead><tr><th>Caída</th><th>Subida necesaria para recuperar</th></tr></thead>
+          <tbody>
+            <tr><td>−10 %</td><td>+11,1 %</td></tr>
+            <tr><td>−20 %</td><td>+25,0 %</td></tr>
+            <tr><td>−30 %</td><td>+42,9 %</td></tr>
+            <tr><td>−50 %</td><td>+100,0 %</td></tr>
+            <tr><td>−75 %</td><td>+300,0 %</td></tr>
+          </tbody>
+        </table>
+        <code class="formula-box">Subida necesaria = 1 / (1 − caída) − 1</code>
+        <p>Por eso limitar las pérdidas grandes suele aportar más que perseguir la máxima rentabilidad.</p>
+
+        <h2 id="beta">Beta: el riesgo relativo al mercado</h2>
+        <p>La beta compara los movimientos de una acción con los del mercado. Con beta 1,5, si el índice cae un 10 %, la acción tiende a caer alrededor de un 15 %. Con beta 0,6, alrededor de un 6 %. Es una tendencia histórica, no una garantía.</p>
+
+        <h2 id="gestionar">Cómo se gestiona en la práctica</h2>
+        <ul>
+          <li><strong>Horizonte:</strong> el dinero que necesitarás pronto no debería estar en activos volátiles.</li>
+          <li><strong>Diversificación:</strong> activos que no se mueven a la vez suavizan la cartera.</li>
+          <li><strong>Tamaño de posición:</strong> que ninguna inversión pueda hundir el conjunto.</li>
+          <li><strong>Rebalanceo:</strong> volver periódicamente al reparto que elegiste.</li>
+          <li><strong>Fondo de emergencia:</strong> para no tener que vender en una caída.</li>
+        </ul>
+        <div class="callout"><strong>Para practicar.</strong> En el <a href="{{root}}herramientas/simulador-cartera.html">simulador de cartera</a> puedes ver cómo cambian la rentabilidad esperada, la volatilidad y la peor caída según cómo repartas.</div>
+
+        <h2 id="relacionado">Términos relacionados</h2>
+        <div class="related">
+          <a href="{{root}}glosario.html#volatilidad">Volatilidad</a>
+          <a href="{{root}}glosario.html#beta">Beta</a>
+          <a href="{{root}}glosario.html#var">VaR</a>
+          <a href="{{root}}glosario.html#sharpe">Ratio de Sharpe</a>
+          <a href="{{root}}glosario.html#diversificacion">Diversificación</a>
+        </div>
+      </article>
+
+      <aside class="toc" aria-label="En esta guía">
+        <h4>En esta guía</h4>
+        <ol>
+          <li><a href="#riesgo">Qué es el riesgo</a></li>
+          <li><a href="#volatilidad">Volatilidad</a></li>
+          <li><a href="#caidas">Las caídas no son simétricas</a></li>
+          <li><a href="#beta">Beta</a></li>
+          <li><a href="#gestionar">Cómo se gestiona</a></li>
+        </ol>
+        <a class="btn btn--gold" href="{{root}}herramientas/simulador-cartera.html">Abrir simulador</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap cta__inner reveal">
+      <h2>El riesgo se entiende mejor practicando.</h2>
+      <p>El módulo 3 trabaja volatilidad, correlación y tamaño de posición con ejercicios corregidos.</p>
+      <a class="btn btn--gold btn--lg" href="{{root}}precios.html">Ver planes →</a>
+    </div>
+  </section>
+</main>
+
+{{> footer}}

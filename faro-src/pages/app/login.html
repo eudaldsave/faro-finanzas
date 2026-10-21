@@ -1,0 +1,68 @@
+<!--meta title="Acceder · Faro Finanzas" desc="Entra en tu cuenta de Faro Finanzas o crea una gratis." scripts="auth.js login.js" -->
+{{> header}}
+
+<main id="contenido" class="auth">
+  <section class="auth__side">
+    <span class="pill" style="align-self:flex-start">Faro Finanzas</span>
+    <h1 id="auth-title">Vuelve a donde lo dejaste</h1>
+    <p id="auth-sub">Tu progreso, tus informes y Lumen te esperan.</p>
+    <ul>
+      <li>Módulo 1 completo gratis</li>
+      <li>Test de nivel e informe personalizado</li>
+      <li>Sin tarjeta para empezar</li>
+    </ul>
+  </section>
+
+  <section class="auth__main">
+    <div class="auth__card">
+      <div id="auth-forms">
+        <div class="auth__tabs" role="tablist" aria-label="Tipo de acceso">
+          <button type="button" role="tab" id="tab-login" aria-selected="true" aria-controls="auth-form">Iniciar sesión</button>
+          <button type="button" role="tab" id="tab-register" aria-selected="false" aria-controls="auth-form">Crear cuenta</button>
+        </div>
+
+        <form id="auth-form" novalidate>
+          <div class="field" data-modes="registro" hidden>
+            <label for="auth-name">Nombre</label>
+            <input type="text" id="auth-name" name="name" autocomplete="given-name">
+          </div>
+          <div class="field" data-modes="login registro">
+            <label for="auth-email">Correo electrónico</label>
+            <input type="email" id="auth-email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="auth-password">Contraseña</label>
+            <div class="pw">
+              <input type="password" id="auth-password" name="password" autocomplete="current-password" required minlength="8">
+              <button type="button" class="pw-toggle" aria-controls="auth-password" aria-pressed="false">Mostrar</button>
+            </div>
+            <div class="strength" data-modes="registro nueva" hidden><i id="pw-meter"></i></div>
+            <small id="pw-hint" data-modes="registro nueva" hidden>Mínimo 8 caracteres. Mejor si mezclas letras, números y símbolos.</small>
+          </div>
+          <div class="field" data-modes="registro nueva" hidden>
+            <label for="auth-confirm">Repite la contraseña</label>
+            <div class="pw">
+              <input type="password" id="auth-confirm" name="confirm" autocomplete="new-password">
+              <button type="button" class="pw-toggle" aria-controls="auth-confirm" aria-pressed="false">Mostrar</button>
+            </div>
+          </div>
+          <label class="check" data-modes="registro" hidden><input type="checkbox" id="auth-terms"> <span>Acepto los <a href="{{root}}legal/terminos.html">términos</a> y la <a href="{{root}}legal/privacidad.html">política de privacidad</a>.</span></label>
+          <p data-modes="login" style="text-align:right;margin:-6px 0 16px"><a class="link-gold" href="#" id="forgot">¿Has olvidado la contraseña?</a></p>
+          <button class="btn btn--gold" type="submit" id="auth-submit">Entrar →</button>
+          <p class="form-msg" id="auth-msg" role="alert"></p>
+          <div id="auth-ok" hidden></div>
+        </form>
+        <p class="auth__alt" id="auth-alt"></p>
+      </div>
+
+      <div id="auth-session" hidden>
+        <p class="form-ok" id="auth-session-msg" style="margin-top:0"></p>
+        <a class="btn btn--gold" href="{{root}}index.html" style="margin-top:18px">Ir al inicio →</a>
+        <p class="auth__alt"><a href="#" id="auth-logout">Cerrar sesión</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{> footer}}
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.js" integrity="sha384-BWcjm9OdFth9TbhCxZPdm+gAOUMAzQy9nmTs12ioXdCcbVnJaPMn+fMUoQCLt60R" crossorigin="anonymous"></script>
