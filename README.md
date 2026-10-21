@@ -65,8 +65,18 @@ La URL y la clave publicable de Supabase están en `faro-src/assets/auth.js`. So
 
 ## Pendiente antes de publicar
 
-- Precios, garantía, opiniones, equipo, email y redes: son contenido de ejemplo.
+- Opiniones, equipo, email y redes: son contenido de ejemplo.
 - Páginas legales: plantillas con huecos en amarillo; revisar con un profesional. Ahora la web guarda cuentas de usuario: la política de privacidad debe mencionarlo.
 - Correo de Supabase: el servicio de correo incluido solo envía a los miembros de tu organización de Supabase y con un límite bajo por hora. Configura un SMTP propio (Authentication → Emails) antes de abrir el registro al público.
-- Envío de la guía por email y pagos: solo interfaz, sin backend.
-- Curso: los módulos 1 y 2 tienen lecciones y cualquier usuario con cuenta puede verlas, porque todavía no hay pagos. La portada y la página de precios venden los módulos 2 a 5 como parte del plan Completo: cuando haya pagos, `/api/leccion` tendrá que comprobar el plan del alumno además de su sesión. Los módulos 3 a 5 aparecen como «Próximamente».
+- Envío de la guía por email: solo interfaz, sin backend.
+- Curso: los módulos 1 y 2 tienen lecciones; los módulos 3 a 5 aparecen como «Próximamente».
+
+## Pagos
+
+De momento todo es gratuito y la web no ofrece nada a la venta: cualquier usuario con cuenta ve todos los módulos disponibles. Antes de cobrar hay que:
+
+1. Decidir qué es gratis y qué de pago.
+2. Conectar una pasarela de pago y guardar en Supabase qué ha comprado cada alumno.
+3. Hacer que `/api/leccion` (`faro-server/lessons.mjs`) compruebe lo que ha comprado el alumno además de su sesión.
+4. Volver a poner la página de precios, la sección de precios de la portada y el enlace del menú. La versión anterior, con un plan gratis y otro de 89 €, sigue en el historial: `git show a3ca830:faro-src/pages/precios.html`.
+5. Actualizar los términos (apartado «Precio») y la política de privacidad (datos de pago).
