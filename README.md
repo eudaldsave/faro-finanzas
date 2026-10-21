@@ -45,7 +45,7 @@ Abre http://localhost:5173. Sin `ANTHROPIC_API_KEY`, el chat funciona en modo de
 | Servicio | Para qué | Dónde |
 |---|---|---|
 | GitHub | Código fuente | `eudaldsave/faro-finanzas` |
-| Vercel | Web y chat. Cada `git push` a `main` publica en producción; las demás ramas generan una vista previa. | Proyecto `faro-finanzas` |
+| Vercel | Web y chat. Cada `git push` a `main` publica en producción; las demás ramas generan una vista previa. | Proyecto `faro-finanzas`: https://faro-finanzas-pi.vercel.app |
 | Supabase | Cuentas de usuario (registro, acceso y recuperación de contraseña) | Proyecto `faro-finanzas` (eu-west-3) |
 
 Vercel ejecuta `npm run build` y publica la carpeta `faro/` (ver `vercel.json`). El chat necesita la variable de entorno `ANTHROPIC_API_KEY` en el proyecto de Vercel; sin ella, la portada usa las respuestas de demostración.
