@@ -1,0 +1,77 @@
+<p>Los márgenes dicen cuánto se queda la empresa de cada euro vendido. Pero no dicen cuánto dinero ha tenido que invertir para vender ese euro. Un negocio que gana 10 invirtiendo 50 es mucho mejor que otro que gana 10 invirtiendo 500. Para eso están las medidas de rentabilidad sobre el capital.</p>
+
+<h2 id="roe">ROE: rentabilidad para el accionista</h2>
+<code class="formula-box">ROE = beneficio neto / patrimonio neto</code>
+<p>El <a href="/glosario.html#roe">ROE</a> mide cuánto gana la empresa por cada euro que han puesto (o dejado dentro) sus accionistas. Cafés Montaña en 2025: 12 / 80 = <strong>15 %</strong>. En 2024 fue 9 / 72 = 12,5 %.</p>
+<p>Algunos analistas usan el patrimonio neto medio del año en lugar del final: (72 + 80) / 2 = 76, y entonces el ROE sale 15,8 %. Las dos formas son válidas; lo importante es usar siempre la misma al comparar.</p>
+
+<h2 id="dupont">De dónde sale el ROE</h2>
+<p>El ROE se puede descomponer en tres piezas (es el llamado análisis DuPont):</p>
+<code class="formula-box">ROE = margen neto × rotación del activo × apalancamiento</code>
+<table>
+  <thead><tr><th>Cafés Montaña 2025</th><th>Cálculo</th><th>Valor</th></tr></thead>
+  <tbody>
+    <tr><td>Margen neto: cuánto gana de cada euro vendido</td><td>12 / 200</td><td>6 %</td></tr>
+    <tr><td>Rotación: cuánto vende por cada euro de activo</td><td>200 / 176</td><td>1,14</td></tr>
+    <tr><td>Apalancamiento: activo por cada euro de los accionistas</td><td>176 / 80</td><td>2,2</td></tr>
+    <tr><td><strong>ROE</strong></td><td>6 % × 1,14 × 2,2</td><td><strong>15 %</strong></td></tr>
+  </tbody>
+</table>
+<p>Así se entiende el ejemplo del supermercado de la lección anterior: con un margen del 3 % pero una rotación muy alta, puede lograr un buen ROE. Y aparece una trampa: el ROE también sube si la empresa se endeuda más.</p>
+<div class="callout"><strong>Cuidado con los ROE muy altos.</strong> Un ROE del 40 % puede ser señal de un negocio excelente, de mucha deuda o de un patrimonio neto muy pequeño (por pérdidas pasadas o por recompras de acciones). Antes de impresionarte, mira las tres piezas.</div>
+
+<h2 id="roic">ROIC: rentabilidad del negocio</h2>
+<p>El ROIC mide lo que rinde el negocio en sí, con independencia de cómo se financie. Compara el resultado operativo después de impuestos con todo el capital invertido, venga de accionistas o de prestamistas:</p>
+<code class="formula-box">ROIC = EBIT × (1 − tipo impositivo) / (patrimonio neto + deuda neta)</code>
+<p>El numerador se llama <strong>NOPAT</strong>: el beneficio operativo después de impuestos, como si la empresa no tuviera deuda.</p>
+<table>
+  <thead><tr><th>Cafés Montaña 2025</th><th>Cálculo</th><th>Valor</th></tr></thead>
+  <tbody>
+    <tr><td>NOPAT</td><td>20 × (1 − 0,25)</td><td>15</td></tr>
+    <tr><td>Capital invertido</td><td>80 + 46</td><td>126</td></tr>
+    <tr><td><strong>ROIC</strong></td><td>15 / 126</td><td><strong>11,9 %</strong></td></tr>
+  </tbody>
+</table>
+<p>El tipo impositivo del 25 % sale de su propia cuenta de resultados: 4 de impuestos sobre 16 de resultado antes de impuestos.</p>
+<p>El capital invertido también se puede calcular por el lado del activo: activo no corriente más circulante operativo menos los otros pasivos del día a día: 136 + 0 − 10 = 126. Sale lo mismo, porque son las dos caras del balance.</p>
+
+<h2 id="crear-valor">Cuándo crecer crea valor</h2>
+<p>Invertir en el negocio solo crea valor si el ROIC supera lo que cuesta financiarse (el <strong>coste del capital</strong>, que estudiarás en el módulo 2). Si a Cafés Montaña le cuesta en torno a un 8 % financiarse y cada cafetería nueva rinde cerca del 12 %, abrir más cafeterías crea valor para el accionista. Si rindieran un 5 %, crecer lo destruiría, aunque las ventas y el beneficio subieran.</p>
+<p>Las empresas con un ROIC alto y estable durante muchos años suelen tener alguna <strong>ventaja competitiva</strong>: una marca fuerte, costes más bajos que sus rivales o clientes a los que les cuesta cambiar de proveedor.</p>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>ROE = beneficio neto / patrimonio neto. Cafés Montaña: 15 %.</li>
+  <li>El ROE se descompone en margen × rotación × apalancamiento; la deuda puede inflarlo.</li>
+  <li>ROIC = NOPAT / (patrimonio neto + deuda neta). Mide el negocio sin el efecto de la financiación. Cafés Montaña: 11,9 %.</li>
+  <li>Crecer crea valor cuando el ROIC supera el coste del capital.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "Una empresa tiene un beneficio neto de 30 y un patrimonio neto de 200. ¿Cuál es su ROE?",
+    "options": ["6 %", "15 %", "30 %", "20 %"],
+    "answer": 1,
+    "why": "ROE = 30 / 200 = 0,15, un 15 %."
+  },
+  {
+    "q": "Una empresa tiene un EBIT de 40 y paga un 25 % de impuestos. ¿Cuál es su NOPAT?",
+    "options": ["10", "30", "40", "50"],
+    "answer": 1,
+    "why": "NOPAT = EBIT × (1 − tipo impositivo) = 40 × 0,75 = 30."
+  },
+  {
+    "q": "La empresa A tiene un ROE del 25 % y una deuda muy alta; la empresa B, un ROE del 18 % sin deuda. ¿Qué conviene pensar?",
+    "options": ["A es claramente mejor negocio", "Parte del ROE de A puede venir de la deuda: hay que mirar también el ROIC y el riesgo", "B tiene un error en sus cuentas", "La deuda no influye en el ROE"],
+    "answer": 1,
+    "why": "El apalancamiento multiplica el ROE. Para comparar la calidad de los negocios, el ROIC es más justo, y la deuda alta añade riesgo en los años malos."
+  },
+  {
+    "q": "Si el ROIC de una empresa es del 12 % y su coste del capital es del 8 %, invertir más en el mismo negocio...",
+    "options": ["destruye valor", "crea valor", "no cambia nada", "solo afecta al dividendo"],
+    "answer": 1,
+    "why": "Cada euro invertido rinde más de lo que cuesta conseguirlo, así que crecer aumenta el valor para el accionista."
+  }
+]
+-->

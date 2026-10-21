@@ -1,0 +1,80 @@
+<p>Balance, cuenta de resultados y estado de flujos no son tres documentos sueltos: cuentan la misma historia desde tres ángulos. Entender cómo se conectan te permite comprobar que las cifras tienen sentido y localizar enseguida lo que no encaja.</p>
+
+<h2 id="conexiones">Las cuatro conexiones clave</h2>
+<p>Con las cuentas de Cafés Montaña de 2024 y 2025:</p>
+<table>
+  <thead><tr><th>Conexión</th><th>Cálculo</th><th>Resultado</th></tr></thead>
+  <tbody>
+    <tr><td>El beneficio no repartido aumenta el patrimonio neto</td><td>72 + 12 − 4</td><td>80</td></tr>
+    <tr><td>El estado de flujos explica la variación del efectivo</td><td>14 + 20 − 16 − 3</td><td>15</td></tr>
+    <tr><td>El capex y las amortizaciones mueven el inmovilizado</td><td>100 + 16 − 10</td><td>106</td></tr>
+    <tr><td>Los préstamos nuevos cambian la deuda</td><td>60 + 1</td><td>61</td></tr>
+  </tbody>
+</table>
+<p>En cada fila, el punto de partida es el balance de 2024, los movimientos vienen de la cuenta de resultados o del estado de flujos de 2025 y el resultado coincide con el balance de 2025.</p>
+<ol>
+  <li><strong>Resultados → balance.</strong> El beneficio neto del año (12) se suma al patrimonio neto, y los dividendos (4) lo reducen.</li>
+  <li><strong>Flujos → balance.</strong> La variación del efectivo en el estado de flujos (+1) es exactamente lo que cambia la partida de efectivo del balance.</li>
+  <li><strong>Inversión y amortización → inmovilizado.</strong> Lo que se invierte (16) aumenta el inmovilizado y lo que se amortiza (10) lo reduce. La amortización aparece como gasto en la cuenta de resultados y se suma de nuevo en el flujo de explotación.</li>
+  <li><strong>Circulante.</strong> Las variaciones de existencias, clientes y proveedores del balance son los ajustes del flujo de explotación que viste en la lección 5.</li>
+</ol>
+
+<h2 id="sigue-el-dinero">Sigue el dinero: dos operaciones</h2>
+<p><strong>Un cliente paga un café de 2 € en una cafetería.</strong></p>
+<ul>
+  <li>Cuenta de resultados: las ventas suben 2 €.</li>
+  <li>Balance: el efectivo sube 2 €.</li>
+  <li>Estado de flujos: el flujo de explotación sube 2 €.</li>
+</ul>
+<p><strong>Cafés Montaña compra una tostadora de 5 M€ y la paga al contado.</strong></p>
+<ul>
+  <li>Cuenta de resultados: ese día, nada. El gasto llegará poco a poco con la amortización.</li>
+  <li>Balance: el inmovilizado sube 5 M€ y el efectivo baja 5 M€. El total no cambia: la empresa ha cambiado dinero por una máquina.</li>
+  <li>Estado de flujos: el flujo de inversión baja 5 M€.</li>
+</ul>
+<p>Si la tostadora se hubiera comprado con un préstamo, el pasivo subiría 5 M€ en lugar de bajar el efectivo, y en el estado de flujos aparecería una entrada de 5 M€ en financiación que compensa la salida en inversión.</p>
+<div class="callout"><strong>Comprueba antes de analizar.</strong> Si el patrimonio neto cambia mucho más de lo que explican el beneficio y los dividendos, ha pasado algo más: una ampliación de capital, una recompra de acciones o un ajuste contable. Lo encontrarás en el estado de cambios en el patrimonio neto.</div>
+
+<h2 id="para-que-sirve">Para qué te sirve</h2>
+<ul>
+  <li><strong>Detectar errores al copiar datos.</strong> Si tus cálculos no cuadran, te falta alguna partida.</li>
+  <li><strong>Entender de dónde sale cada cifra.</strong> Un flujo de explotación muy por debajo del beneficio se explica por el circulante, y el circulante se ve en el balance.</li>
+  <li><strong>Hacer proyecciones.</strong> Para estimar el futuro, como en el <a href="/herramientas/dcf.html">descuento de flujos</a> del módulo 2, hay que mover las tres piezas a la vez.</li>
+</ul>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>El beneficio no repartido pasa al patrimonio neto.</li>
+  <li>La variación del efectivo del estado de flujos coincide con la del balance.</li>
+  <li>Capex y amortizaciones explican cómo cambia el inmovilizado.</li>
+  <li>Comprar un activo al contado no reduce el beneficio de ese día: cambia efectivo por inmovilizado.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "Una empresa empieza el año con un patrimonio neto de 72, gana 12 y reparte 4 en dividendos. ¿Cuál es su patrimonio neto final?",
+    "options": ["76", "80", "84", "88"],
+    "answer": 1,
+    "why": "72 + 12 − 4 = 80. Es exactamente lo que ocurrió en Cafés Montaña en 2025."
+  },
+  {
+    "q": "El inmovilizado empieza el año en 100, la empresa invierte 16 y amortiza 10. ¿Cuánto vale el inmovilizado al cierre?",
+    "options": ["126", "116", "106", "94"],
+    "answer": 2,
+    "why": "Inmovilizado final = inicial + inversiones − amortizaciones = 100 + 16 − 10 = 106."
+  },
+  {
+    "q": "Una empresa compra maquinaria por 5 M€ y la paga al contado. ¿Qué pasa en sus cuentas ese día?",
+    "options": ["El beneficio baja 5 M€", "El inmovilizado sube 5 M€ y el efectivo baja 5 M€", "El patrimonio neto baja 5 M€", "Las ventas suben 5 M€"],
+    "answer": 1,
+    "why": "La empresa cambia dinero por una máquina: un activo sube y otro baja en la misma cantidad. El gasto llegará en los años siguientes con la amortización."
+  },
+  {
+    "q": "La variación del efectivo que muestra el estado de flujos coincide con...",
+    "options": ["La variación del efectivo del balance entre los dos cierres", "El beneficio neto del año", "El EBITDA", "El dividendo pagado"],
+    "answer": 0,
+    "why": "El estado de flujos explica por qué ha cambiado el efectivo. Su resultado final tiene que coincidir con la diferencia entre el efectivo del balance de un año y el del anterior."
+  }
+]
+-->

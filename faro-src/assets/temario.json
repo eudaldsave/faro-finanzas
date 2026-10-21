@@ -1,0 +1,57 @@
+{
+  "modules": [
+    {
+      "n": 1,
+      "title": "Contabilidad para inversores",
+      "level": "inicial",
+      "available": true,
+      "summary": "Aprende a leer el balance, la cuenta de resultados y el estado de flujos de efectivo, y a detectar las señales de alerta.",
+      "lessons": [
+        { "id": "m1-01", "title": "Para qué sirven las cuentas de una empresa", "minutes": 10 },
+        { "id": "m1-02", "title": "El balance: lo que la empresa tiene y lo que debe", "minutes": 12 },
+        { "id": "m1-03", "title": "Patrimonio neto y deuda: quién financia la empresa", "minutes": 11 },
+        { "id": "m1-04", "title": "La cuenta de resultados, de arriba abajo", "minutes": 12 },
+        { "id": "m1-05", "title": "Beneficio no es caja: el principio de devengo", "minutes": 12 },
+        { "id": "m1-06", "title": "El estado de flujos de efectivo", "minutes": 12 },
+        { "id": "m1-07", "title": "Cómo encajan los tres estados financieros", "minutes": 10 },
+        { "id": "m1-08", "title": "Márgenes: cuánto se queda de cada euro", "minutes": 11 },
+        { "id": "m1-09", "title": "Rentabilidad sobre el capital: ROE y ROIC", "minutes": 13 },
+        { "id": "m1-10", "title": "Liquidez y solvencia: ¿puede pagar lo que debe?", "minutes": 12 },
+        { "id": "m1-11", "title": "Señales de alerta en las cuentas", "minutes": 13 },
+        { "id": "m1-12", "title": "Caso práctico: analiza Cafés Montaña", "minutes": 15 }
+      ]
+    },
+    {
+      "n": 2,
+      "title": "Cuánto vale una empresa",
+      "level": "medio",
+      "available": false,
+      "lessonCount": 14,
+      "topics": ["Múltiplos: PER, EV/EBITDA, precio/valor contable", "Descuento de flujos paso a paso", "Margen de seguridad"]
+    },
+    {
+      "n": 3,
+      "title": "Riesgo y volatilidad",
+      "level": "medio",
+      "available": false,
+      "lessonCount": 11,
+      "topics": ["Volatilidad, caídas máximas y correlación", "Tamaño de posición", "Sesgos que nos hacen perder dinero"]
+    },
+    {
+      "n": 4,
+      "title": "Diseña tu cartera",
+      "level": "avanzado",
+      "available": false,
+      "lessonCount": 13,
+      "topics": ["Asignación de activos según tu horizonte", "Fondos indexados frente a acciones individuales", "Rebalanceo y costes"]
+    },
+    {
+      "n": 5,
+      "title": "Economía y ciclos",
+      "level": "avanzado",
+      "available": false,
+      "lessonCount": 10,
+      "topics": ["Tipos de interés e inflación", "Cómo leer un dato macro sin ruido", "Ciclos económicos y sectores"]
+    }
+  ]
+}

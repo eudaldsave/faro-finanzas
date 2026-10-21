@@ -2,7 +2,7 @@
 
 Servidor local: sirve la web generada en `../faro` y conecta el chat de Lumen con la API de Claude (`POST /api/chat`, respuesta en streaming). La clave de la API solo vive en el servidor; nunca llega al navegador.
 
-La lógica del chat está en `chat.mjs` y la comparten este servidor y la función de Vercel (`../api/chat.mjs`).
+La lógica del chat está en `chat.mjs` y la de las lecciones del curso (`GET /api/leccion?id=m1-01`, solo con sesión de Supabase) en `lessons.mjs`. Las comparten este servidor y las funciones de Vercel (`../api/chat.mjs` y `../api/leccion.mjs`).
 
 ## Arrancar
 

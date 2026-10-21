@@ -1,5 +1,5 @@
-// Faro Finanzas — servidor local: sirve la web estática y conecta el chat de Lumen con la API de Claude.
-// En Vercel no se usa: la web se sirve como estática y el chat corre en ../api/chat.mjs.
+// Faro Finanzas — servidor local: sirve la web estática, las lecciones del curso y el chat de Lumen con la API de Claude.
+// En Vercel no se usa: la web se sirve como estática y la API corre en ../api/ (chat.mjs y leccion.mjs).
 //
 //   ANTHROPIC_API_KEY=...  node server.mjs
 //
@@ -12,6 +12,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { MODEL, chatEnabled, handleChat, sendJson } from './chat.mjs';
+import { handleLesson } from './lessons.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const SITE = path.resolve(here, process.env.FARO_SITE_DIR || '../faro');
@@ -63,6 +64,14 @@ http.createServer((req, res) => {
       console.error(err);
       if (!res.headersSent) sendJson(res, 500, { error: 'Error interno.' });
       else res.end();
+    });
+    return;
+  }
+  if (req.url.split('?')[0] === '/api/leccion') {
+    if (req.method !== 'GET') { res.writeHead(405, { Allow: 'GET' }).end(); return; }
+    handleLesson(req, res).catch((err) => {
+      console.error(err);
+      if (!res.headersSent) sendJson(res, 500, { error: 'Error interno.' });
     });
     return;
   }

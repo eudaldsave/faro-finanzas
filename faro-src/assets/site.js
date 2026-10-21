@@ -50,6 +50,16 @@
     toggle.setAttribute('aria-expanded', 'false');
   }));
 
+  /* Con sesión iniciada, el botón de la cabecera lleva a Mi curso. Supabase guarda la sesión en
+     localStorage con esta clave (proyecto de auth.js); así no hace falta cargar su librería en cada página. */
+  const login = document.querySelector('.nav__login');
+  if (login && store.get('sb-fzhuqfrgzkagxzygldpq-auth-token')) {
+    const cta = login.nextElementSibling;
+    cta.href = new URL('../curso/index.html', login.href).href;
+    cta.textContent = 'Mi curso →';
+    login.hidden = true;
+  }
+
   /* Enlace activo según la sección del sitio */
   const section = document.body.dataset.section;
   if (section) {

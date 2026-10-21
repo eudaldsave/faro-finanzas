@@ -6,11 +6,22 @@ Web de formación financiera con tutor con IA (Lumen), calculadoras, glosario y 
 
 | Carpeta | Qué contiene |
 |---|---|
-| `faro-src/` | **Lo que se edita.** Páginas (`pages/`), cabecera y pie comunes (`partials/`), estilos y scripts (`assets/`). |
+| `faro-src/` | **Lo que se edita.** Páginas (`pages/`), cabecera y pie comunes (`partials/`), estilos y scripts (`assets/`) y lecciones del curso (`curso/`). |
 | `faro/` | La web generada. No la edites a mano: se sobrescribe al regenerar y no se sube a git. |
-| `faro-server/` | Servidor local que sirve la web y conecta el chat de Lumen con la API de Claude (`chat.mjs`). Ver su `README.md`. |
-| `api/` | Función de Vercel para el chat (`/api/chat`); reutiliza `faro-server/chat.mjs`. |
+| `faro-server/` | Servidor local: sirve la web, las lecciones (`lessons.mjs`) y el chat de Lumen (`chat.mjs`). Ver su `README.md`. |
+| `api/` | Funciones de Vercel: `/api/chat` y `/api/leccion`. Reutilizan el código de `faro-server/`. |
+| `supabase/migrations/` | Cambios en la base de datos de Supabase, en orden. |
 | `tools/` | `fake-anthropic.cjs`: API falsa para probar el chat sin clave. |
+
+## Curso
+
+- **Temario:** `faro-src/assets/temario.json`. Módulos, títulos, duración y si están disponibles (`available`). Es público.
+- **Lecciones:** `faro-src/curso/<id>.html`, por ejemplo `m1-01.html`. Contienen el texto de la lección y, al final, el test en un comentario `<!--quiz [ ... ] -->` con preguntas así: `{"q": "...", "options": ["...", "..."], "answer": 0, "why": "..."}` (`answer` es la posición de la respuesta correcta, empezando por 0). Los enlaces internos van con ruta absoluta (`/glosario.html#roe`).
+- **Acceso:** las lecciones no se publican como páginas. `/api/leccion` las sirve solo a quien tiene sesión iniciada en Supabase. Las páginas `curso/index.html` (Mi curso) y `curso/leccion.html` las muestran.
+- **Progreso:** tabla `lesson_progress` de Supabase (mejor nota de cada alumno en cada test), protegida con RLS: cada alumno solo ve y escribe lo suyo.
+- **Comprobación:** `npm run build` falla si una lección del temario no existe, si su test no es JSON válido o si tiene un enlace interno roto. Así un error no llega a publicarse.
+
+Para añadir una lección: crea el archivo en `faro-src/curso/`, añádela a su módulo en `temario.json` y ejecuta `npm run build`.
 
 ## Comandos
 
@@ -46,7 +57,7 @@ Abre http://localhost:5173. Sin `ANTHROPIC_API_KEY`, el chat funciona en modo de
 |---|---|---|
 | GitHub | Código fuente | `eudaldsave/faro-finanzas` |
 | Vercel | Web y chat. Cada `git push` a `main` publica en producción; las demás ramas generan una vista previa. | Proyecto `faro-finanzas`: https://faro-finanzas-pi.vercel.app |
-| Supabase | Cuentas de usuario (registro, acceso y recuperación de contraseña) | Proyecto `faro-finanzas` (eu-west-3) |
+| Supabase | Cuentas de usuario (registro, acceso y recuperación de contraseña) y progreso del curso | Proyecto `faro-finanzas` (eu-west-3) |
 
 Vercel ejecuta `npm run build` y publica la carpeta `faro/` (ver `vercel.json`). El chat necesita la variable de entorno `ANTHROPIC_API_KEY` en el proyecto de Vercel; sin ella, la portada usa las respuestas de demostración.
 
@@ -58,3 +69,4 @@ La URL y la clave publicable de Supabase están en `faro-src/assets/auth.js`. So
 - Páginas legales: plantillas con huecos en amarillo; revisar con un profesional. Ahora la web guarda cuentas de usuario: la política de privacidad debe mencionarlo.
 - Correo de Supabase: el servicio de correo incluido solo envía a los miembros de tu organización de Supabase y con un límite bajo por hora. Configura un SMTP propio (Authentication → Emails) antes de abrir el registro al público.
 - Envío de la guía por email y pagos: solo interfaz, sin backend.
+- Curso: solo el módulo 1 tiene lecciones. Los módulos 2 a 5 aparecen como «Próximamente» en Mi curso, pero la portada y la página de precios los venden como parte del plan Completo.

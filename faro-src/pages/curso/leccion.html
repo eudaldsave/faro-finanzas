@@ -1,0 +1,45 @@
+<!--meta title="Lección · Faro Finanzas" desc="Lección del curso de Faro Finanzas." section="curso" scripts="auth.js course.js lesson.js" -->
+{{> header}}
+
+<main id="contenido">
+  <section class="page-hero page-hero--left">
+    <div class="wrap">
+      <p class="breadcrumb"><a href="index.html">Mi curso</a> / <span id="lesson-module">Módulo</span></p>
+      <span class="pill" id="lesson-pill">Lección</span>
+      <h1 id="lesson-title">Cargando la lección…</h1>
+      <p class="meta-line" id="lesson-meta"></p>
+    </div>
+  </section>
+
+  <section class="page page--light">
+    <div class="wrap article">
+      <article>
+        {{> course-gate}}
+        <p class="form-msg" id="lesson-msg" role="alert"></p>
+        <div class="prose" id="lesson-body"></div>
+
+        <section class="lesson-quiz" id="lesson-quiz" aria-labelledby="quiz-title" hidden>
+          <h2 id="quiz-title">Comprueba lo que has aprendido</h2>
+          <p class="lesson-quiz__intro" id="quiz-intro"></p>
+          <form id="quiz-form" novalidate>
+            <div id="quiz-questions"></div>
+            <button class="btn btn--gold" type="submit" id="quiz-submit">Comprobar respuestas</button>
+            <p class="form-msg" id="quiz-msg" role="alert"></p>
+          </form>
+          <div class="lesson-quiz__result" id="quiz-result" aria-live="polite" hidden></div>
+        </section>
+
+        <nav class="lesson-nav" id="lesson-nav" aria-label="Lección anterior y siguiente"></nav>
+      </article>
+
+      <aside class="toc" aria-label="Lecciones del módulo">
+        <h4 id="toc-title">Lecciones</h4>
+        <ol id="lesson-toc"></ol>
+        <a class="btn btn--gold" href="index.html">Ver mi progreso</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+{{> footer}}
+{{> supabase}}
