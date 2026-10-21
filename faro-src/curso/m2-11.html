@@ -1,0 +1,75 @@
+<p>El descuento de flujos (DCF, por sus siglas en inglés) estima el valor de una empresa a partir del dinero que generará en el futuro. Se hace en tres pasos: proyectar los flujos de los próximos años, calcular el valor de los años siguientes (el valor terminal) y traerlo todo al presente. Esta lección cubre el primer paso.</p>
+
+<h2 id="que-flujo">Qué flujo se proyecta</h2>
+<p>Para descontar con el WACC necesitas el flujo de caja libre de toda la empresa, antes de pagar a los bancos:</p>
+<code class="formula-box">Flujo de caja libre de la empresa = NOPAT − reinversión neta</code>
+<ul>
+  <li><strong>NOPAT:</strong> el resultado de explotación después de impuestos, como si no hubiera deuda (módulo 1, lección 9). Cafés Montaña: 20 × 0,75 = 15 M€.</li>
+  <li><strong>Reinversión neta:</strong> lo que invierte por encima de lo que se desgasta, más el aumento del circulante. Cafés Montaña: capex 16 − amortizaciones 10 + circulante 2 = 8 M€.</li>
+</ul>
+<p>Flujo de caja libre de la empresa en 2025: 15 − 8 = <strong>7 M€</strong>.</p>
+<p>¿Por qué no los 4 M€ del módulo 1? Aquel flujo era después de pagar intereses: el del accionista. Si le sumas los intereses después de impuestos (4 × 0,75 = 3), obtienes el de la empresa: 4 + 3 = 7 M€. Son la misma caja vista desde dos sitios.</p>
+
+<h2 id="crecer-cuesta">Crecer cuesta: la relación clave</h2>
+<p>Una empresa no crece gratis: para vender más necesita invertir en nuevas cafeterías. Cuánto necesita invertir depende de lo rentables que sean esas inversiones:</p>
+<code class="formula-box">Crecimiento = tasa de reinversión × ROIC</code>
+<p>Cafés Montaña reinvierte 8 de sus 15 M€ de NOPAT (un 53 %) con un ROIC cercano al 12 %: eso le permite crecer en torno a un 0,53 × 12 % ≈ 6,4 % al año. Dándole la vuelta a la fórmula, para crecer un 6 % con un ROIC del 12 % tiene que reinvertir 6 / 12 = <strong>la mitad</strong> de su NOPAT.</p>
+<p>Esta relación evita un error muy común en las valoraciones: suponer mucho crecimiento sin restar la inversión que haría falta para conseguirlo.</p>
+
+<h2 id="hipotesis">Las hipótesis del caso base</h2>
+<ul>
+  <li>Los próximos 5 años, el NOPAT crece un <strong>6 %</strong> anual, en línea con lo que permite su reinversión actual.</li>
+  <li>El ROIC de las nuevas inversiones se mantiene en el <strong>12 %</strong>, así que reinvierte el <strong>50 %</strong> del NOPAT.</li>
+  <li>La tasa de descuento es el WACC del <strong>8 %</strong> (lección 10).</li>
+</ul>
+
+<h2 id="proyeccion">La proyección</h2>
+<div class="table-scroll"><table>
+  <thead><tr><th>M€</th><th>2026</th><th>2027</th><th>2028</th><th>2029</th><th>2030</th></tr></thead>
+  <tbody>
+    <tr><td>NOPAT (+6 % anual)</td><td>15,90</td><td>16,85</td><td>17,87</td><td>18,94</td><td>20,07</td></tr>
+    <tr><td>Reinversión (50 %)</td><td>−7,95</td><td>−8,43</td><td>−8,93</td><td>−9,47</td><td>−10,04</td></tr>
+    <tr><td><strong>Flujo de caja libre</strong></td><td><strong>7,95</strong></td><td><strong>8,43</strong></td><td><strong>8,93</strong></td><td><strong>9,47</strong></td><td><strong>10,04</strong></td></tr>
+    <tr><td>Factor de descuento (8 %)</td><td>0,9259</td><td>0,8573</td><td>0,7938</td><td>0,7350</td><td>0,6806</td></tr>
+    <tr><td><strong>Valor presente</strong></td><td><strong>7,36</strong></td><td><strong>7,22</strong></td><td><strong>7,09</strong></td><td><strong>6,96</strong></td><td><strong>6,83</strong></td></tr>
+  </tbody>
+</table></div>
+<p>La suma de los valores presentes de estos cinco años es <strong>35,47 M€</strong>. Fíjate en lo poco que es: el valor de empresa de Cafés Montaña en bolsa es de 226 M€. La mayor parte del valor está en los años posteriores a 2030, que calcularás en la próxima lección.</p>
+<div class="callout"><strong>¿Por qué cinco años?</strong> Es un compromiso habitual: lo bastante largo para recoger la fase de crecimiento y lo bastante corto para que las previsiones tengan algo de sentido. En empresas con un crecimiento muy alto se usan a veces 10 años, con un crecimiento que va bajando poco a poco.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>Flujo de caja libre de la empresa = NOPAT − reinversión neta. Cafés Montaña 2025: 7 M€.</li>
+  <li>Crecimiento = tasa de reinversión × ROIC: crecer exige invertir.</li>
+  <li>Caso base: crece un 6 %, reinvierte la mitad del NOPAT y se descuenta al 8 %.</li>
+  <li>Los cinco primeros años solo aportan 35,47 M€ de valor presente.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "Una empresa tiene un NOPAT de 20, un capex de 12, unas amortizaciones de 8 y su circulante aumenta 1. ¿Cuál es su flujo de caja libre de la empresa?",
+    "options": ["5", "15", "21", "11"],
+    "answer": 1,
+    "why": "Reinversión neta = 12 − 8 + 1 = 5. Flujo de caja libre = 20 − 5 = 15."
+  },
+  {
+    "q": "Una empresa reinvierte el 40 % de su NOPAT con un ROIC del 15 %. ¿A qué ritmo puede crecer?",
+    "options": ["4 %", "6 %", "15 %", "55 %"],
+    "answer": 1,
+    "why": "Crecimiento = tasa de reinversión × ROIC = 0,40 × 15 % = 6 %."
+  },
+  {
+    "q": "Una empresa quiere crecer un 5 % al año y sus inversiones rinden un ROIC del 10 %. ¿Qué parte de su NOPAT tiene que reinvertir?",
+    "options": ["5 %", "10 %", "50 %", "100 %"],
+    "answer": 2,
+    "why": "Tasa de reinversión = crecimiento / ROIC = 5 % / 10 % = 50 %."
+  },
+  {
+    "q": "Con una tasa de descuento del 8 %, el factor de descuento del año 2 es 0,8573. ¿Cuánto vale hoy un flujo de 10 M€ de ese año?",
+    "options": ["8,57 M€", "9,26 M€", "10 M€", "11,66 M€"],
+    "answer": 0,
+    "why": "Valor presente = 10 × 0,8573 = 8,57 M€."
+  }
+]
+-->

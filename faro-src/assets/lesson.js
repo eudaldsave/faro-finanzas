@@ -90,11 +90,21 @@
       $('quiz-intro').textContent = `${quiz.length} preguntas. Elige una respuesta en cada una y pulsa «Comprobar respuestas».${best ? ` Tu mejor nota hasta ahora: ${best.score} de ${best.total}.` : ''}`;
     }
 
+    // Las opciones se muestran en orden aleatorio; el value de cada una es su posición original en el test
+    function shuffled(options) {
+      const order = options.map((o, oi) => [o, oi]);
+      for (let i = order.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      return order;
+    }
+
     function draw() {
       intro();
       questions.innerHTML = quiz.map((q, qi) => `<fieldset class="lq">
           <legend>${qi + 1}. ${escape(q.q)}</legend>
-          ${q.options.map((o, oi) => `<label class="lq__opt"><input type="radio" name="q${qi}" value="${oi}"><span>${escape(o)}</span></label>`).join('')}
+          ${shuffled(q.options).map(([o, oi]) => `<label class="lq__opt"><input type="radio" name="q${qi}" value="${oi}"><span>${escape(o)}</span></label>`).join('')}
           <p class="lq__why" hidden></p>
         </fieldset>`).join('');
       submit.hidden = false;
@@ -118,8 +128,10 @@
         const chosen = Number(answers[qi]);
         const right = quiz[qi].answer;
         if (chosen === right) score += 1;
-        set.querySelectorAll('.lq__opt').forEach((label, oi) => {
-          label.querySelector('input').disabled = true;
+        set.querySelectorAll('.lq__opt').forEach((label) => {
+          const input = label.querySelector('input');
+          const oi = Number(input.value);
+          input.disabled = true;
           if (oi === right) label.classList.add('is-right');
           else if (oi === chosen) label.classList.add('is-wrong');
         });

@@ -1,0 +1,71 @@
+<p>¿Prefieres 100 € hoy o 100 € dentro de cinco años? Casi todo el mundo elige hoy, y con razón. Esa preferencia es la base del descuento de flujos: el dinero que una empresa generará en el futuro vale menos que el mismo dinero ahora.</p>
+
+<h2 id="por-que">Por qué el dinero de hoy vale más</h2>
+<ul>
+  <li><strong>Puedes invertirlo:</strong> 100 € hoy al 8 % serán 108 € dentro de un año.</li>
+  <li><strong>La inflación:</strong> con 100 € dentro de cinco años comprarás menos cosas que hoy.</li>
+  <li><strong>El riesgo:</strong> una promesa de pago futuro puede no cumplirse.</li>
+</ul>
+
+<h2 id="descontar">Descontar: el interés compuesto al revés</h2>
+<p>Si 100 € al 8 % se convierten en 108 € en un año, entonces 108 € dentro de un año valen hoy 100 €. Descontar es hacer el cálculo del <a href="/aprende/interes-compuesto.html">interés compuesto</a> en sentido contrario:</p>
+<code class="formula-box">Valor presente = flujo futuro / (1 + r)ⁿ</code>
+<p>Donde <em>r</em> es la tasa de descuento (la rentabilidad que exiges) y <em>n</em>, los años que faltan. Con una tasa del 8 %:</p>
+<table>
+  <thead><tr><th>100 € que recibirás dentro de…</th><th>Cálculo</th><th>Valen hoy</th></tr></thead>
+  <tbody>
+    <tr><td>1 año</td><td>100 / 1,08</td><td>92,59 €</td></tr>
+    <tr><td>5 años</td><td>100 / 1,08⁵</td><td>68,06 €</td></tr>
+    <tr><td>10 años</td><td>100 / 1,08¹⁰</td><td>46,32 €</td></tr>
+  </tbody>
+</table>
+<p>Al número que multiplica el flujo (1 / 1,08ⁿ) se le llama <strong>factor de descuento</strong>: 0,9259 el primer año, 0,6806 el quinto.</p>
+
+<h2 id="perpetuidad">Flujos para siempre: las perpetuidades</h2>
+<p>Una empresa no tiene fecha de caducidad, así que hace falta una forma de valorar flujos que duran indefinidamente. Hay una fórmula sencilla:</p>
+<code class="formula-box">Perpetuidad: valor presente = flujo anual / r</code>
+<p>Recibir 10 € al año para siempre, con una tasa del 8 %, vale hoy 10 / 0,08 = <strong>125 €</strong>. Aunque se cobre sin fin, la suma es finita porque los pagos lejanos valen muy poco hoy.</p>
+<p>Si el flujo además crece cada año a un ritmo <em>g</em>:</p>
+<code class="formula-box">Perpetuidad creciente: valor presente = flujo del próximo año / (r − g)</code>
+<p>10 € el próximo año que crecen un 2 % anual, al 8 %: 10 / (0,08 − 0,02) = <strong>166,67 €</strong>. Es la fórmula de Gordon, y la usarás para el valor terminal en la lección 12. Solo funciona si <em>r</em> es mayor que <em>g</em>.</p>
+
+<h2 id="sensibilidad">La tasa lo cambia todo</h2>
+<p>Cuanto más lejano es un flujo, más depende su valor de la tasa de descuento. 100 € dentro de 10 años valen 61,39 € al 5 % y 38,55 € al 10 %. Como buena parte del valor de una empresa está en flujos lejanos, elegir la tasa es una de las decisiones más importantes de una valoración. La verás en la próxima lección.</p>
+<div class="callout"><strong>Tipos de interés y bolsa.</strong> Cuando suben los tipos de interés, los inversores exigen más rentabilidad y descuentan los flujos futuros con tasas más altas. Por eso las subidas de tipos suelen afectar más a las empresas cuyo valor depende de beneficios lejanos, como las tecnológicas en crecimiento.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>El dinero futuro vale menos que el presente: se puede invertir, pierde poder de compra y tiene riesgo.</li>
+  <li>Valor presente = flujo / (1 + r)ⁿ. Al 8 %, 100 € dentro de 5 años valen hoy 68,06 €.</li>
+  <li>Perpetuidad = flujo / r; perpetuidad creciente = flujo del próximo año / (r − g).</li>
+  <li>Cuanto más lejano el flujo, más sensible es su valor a la tasa de descuento.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "¿Cuánto valen hoy 110 € que recibirás dentro de un año, con una tasa de descuento del 10 %?",
+    "options": ["99 €", "100 €", "110 €", "121 €"],
+    "answer": 1,
+    "why": "Valor presente = 110 / 1,10 = 100 €."
+  },
+  {
+    "q": "¿Cuánto vale hoy recibir 5 € al año para siempre, con una tasa del 5 %?",
+    "options": ["25 €", "100 €", "105 €", "Infinito"],
+    "answer": 1,
+    "why": "Perpetuidad = flujo / r = 5 / 0,05 = 100 €. Aunque los pagos no acaban nunca, los lejanos valen muy poco hoy."
+  },
+  {
+    "q": "Un flujo de 6 € el próximo año crece un 3 % anual para siempre. Con una tasa del 9 %, ¿cuánto vale hoy?",
+    "options": ["50 €", "66,67 €", "100 €", "200 €"],
+    "answer": 2,
+    "why": "Perpetuidad creciente = 6 / (0,09 − 0,03) = 6 / 0,06 = 100 €."
+  },
+  {
+    "q": "Si sube la tasa de descuento, ¿qué ocurre con el valor presente de los flujos futuros?",
+    "options": ["Sube", "Baja, y más cuanto más lejanos son los flujos", "No cambia", "Solo cambia el del primer año"],
+    "answer": 1,
+    "why": "Una tasa más alta reduce todos los valores presentes, y el efecto se acumula con los años: los flujos lejanos son los que más pierden."
+  }
+]
+-->

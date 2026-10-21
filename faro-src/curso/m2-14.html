@@ -1,0 +1,84 @@
+<p>Has valorado Cafés Montaña con múltiplos y con descuento de flujos, y has visto que el resultado es un rango, no un número. Falta la última pieza: cómo decidir con esa incertidumbre. La respuesta clásica se llama margen de seguridad.</p>
+
+<h2 id="concepto">El margen de seguridad</h2>
+<p>Benjamin Graham lo explicaba con un puente: si un puente tiene que soportar camiones de 10 toneladas, no lo construyes para 10, sino para 30. Al invertir, la idea es la misma: como tus estimaciones pueden fallar, compra solo cuando el precio esté claramente por debajo del valor que estimas.</p>
+<code class="formula-box">Margen de seguridad = (valor estimado − precio) / valor estimado</code>
+<p>Es la misma fórmula que usa la <a href="/herramientas/dcf.html">calculadora de descuento de flujos</a>. Si estimas que una acción vale 20 € y cotiza a 15 €, tu margen es (20 − 15) / 20 = 25 %: aunque te hayas equivocado y valga un 25 % menos, no habrías pagado de más.</p>
+
+<h2 id="estimaciones">Todo lo que sabemos de Cafés Montaña</h2>
+<table>
+  <thead><tr><th>Método</th><th>Hipótesis</th><th>Valor por acción</th></tr></thead>
+  <tbody>
+    <tr><td>Comparables, PER mediano</td><td>16 × BPA de 1,20 €</td><td>19,20 €</td></tr>
+    <tr><td>Comparables, EV/EBITDA mediano</td><td>8 × EBITDA − deuda neta</td><td>19,40 €</td></tr>
+    <tr><td>Descuento de flujos, pesimista</td><td>Crece un 3 %, ROIC del 10 %, WACC del 9 %, perpetuidad del 1,5 %</td><td>12,80 €</td></tr>
+    <tr><td>Descuento de flujos, base</td><td>Crece un 6 %, ROIC del 12 %, WACC del 8 %, perpetuidad del 2 %</td><td>18,30 €</td></tr>
+    <tr><td>Descuento de flujos, optimista</td><td>Crece un 8 %, ROIC del 14 %, WACC del 7,5 %, perpetuidad del 2,5 %</td><td>24,50 €</td></tr>
+    <tr><td><strong>Precio en bolsa</strong></td><td></td><td><strong>18,00 €</strong></td></tr>
+  </tbody>
+</table>
+
+<h2 id="lectura">Cómo leer la tabla</h2>
+<ul>
+  <li><strong>Los métodos coinciden bastante.</strong> Comparables y caso base dan entre 18,30 y 19,40 €. Cuando métodos distintos apuntan a la misma zona, la estimación es más fiable.</li>
+  <li><strong>El precio está en el valor central.</strong> Frente al caso base, el margen de seguridad es (18,30 − 18) / 18,30 = <strong>1,6 %</strong>: prácticamente ninguno. A 18 €, el mercado paga más o menos lo que vale el escenario más probable.</li>
+  <li><strong>La asimetría.</strong> Desde 18 €, el escenario pesimista supone una caída del 29 % y el optimista una subida del 36 %. Con riesgos y oportunidades de tamaño parecido, el precio no ofrece una ventaja clara.</li>
+</ul>
+
+<h2 id="decidir">De la valoración a la decisión</h2>
+<p>Con este análisis, un inversor podría razonar así:</p>
+<ul>
+  <li><strong>Esperar a un precio con margen.</strong> Si exige un 25 % de margen sobre el caso base, el precio de compra sería 18,30 × 0,75 ≈ <strong>13,70 €</strong>, cerca del escenario pesimista. A ese precio, incluso si las cosas salen mal, habría pagado un precio razonable.</li>
+  <li><strong>Investigar la hipótesis clave.</strong> Si tiene motivos para creer que las nuevas cafeterías rinden claramente más del 12 % (por ejemplo, porque las aperturas recientes ya lo demuestran), su caso base sería más alto y el precio actual le parecería atractivo.</li>
+  <li><strong>Revisar con cada resultado.</strong> La valoración no se hace una vez para siempre. Cada informe trimestral confirma o desmiente las hipótesis.</li>
+</ul>
+<p>Cuánto invertir en cada acción, es decir, el tamaño de la posición, es otra decisión distinta, y la verás en el módulo 3.</p>
+<div class="callout"><strong>Formación, no recomendación.</strong> Cafés Montaña es una empresa inventada. Ningún resultado de este módulo es una recomendación de comprar o vender nada: el objetivo es que sepas construir tu propia valoración y entender lo que estás pagando.</div>
+
+<h2 id="lista">Tu lista de comprobación para valorar</h2>
+<ol>
+  <li>¿He entendido y analizado el negocio (módulo 1)?</li>
+  <li>¿He normalizado el beneficio y quitado lo extraordinario?</li>
+  <li>¿He comparado PER y EV/EBIT con empresas parecidas y con su historia?</li>
+  <li>¿Mi descuento de flujos resta la reinversión necesaria para crecer?</li>
+  <li>¿Conozco qué hipótesis mueven más el valor y he construido varios escenarios?</li>
+  <li>¿Qué da por hecho el precio actual? ¿Me parece alcanzable?</li>
+  <li>¿Hay margen de seguridad suficiente frente a mi caso base?</li>
+</ol>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>Margen de seguridad = (valor − precio) / valor: protege de los errores de estimación.</li>
+  <li>Cafés Montaña vale entre 12,80 y 24,50 € según el escenario; los métodos centrales apuntan a 18,30–19,40 €.</li>
+  <li>A 18 € cotiza casi en su valor base: buen negocio a un precio justo, sin margen de seguridad.</li>
+  <li>Con un margen del 25 %, el precio de compra estaría en torno a 13,70 €.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "Estimas que una acción vale 50 € y cotiza a 40 €. ¿Cuál es tu margen de seguridad?",
+    "options": ["10 %", "20 %", "25 %", "80 %"],
+    "answer": 1,
+    "why": "Margen = (50 − 40) / 50 = 0,20, un 20 %."
+  },
+  {
+    "q": "Estimas que una acción vale 20 € y quieres un margen de seguridad del 25 %. ¿A qué precio máximo la comprarías?",
+    "options": ["15 €", "16 €", "25 €", "5 €"],
+    "answer": 0,
+    "why": "Precio máximo = valor × (1 − margen) = 20 × 0,75 = 15 €."
+  },
+  {
+    "q": "¿Para qué sirve el margen de seguridad?",
+    "options": ["Para garantizar beneficios", "Para protegerte de los errores inevitables en tus estimaciones de valor", "Para calcular el WACC", "Para elegir los comparables"],
+    "answer": 1,
+    "why": "Toda valoración depende de hipótesis inciertas. Comprar con descuento sobre tu estimación deja espacio para equivocarte sin pagar de más."
+  },
+  {
+    "q": "Cafés Montaña cotiza a 18 € y su valor en el caso base es 18,30 €. ¿Qué conclusión es la más razonable?",
+    "options": ["Está muy barata", "Cotiza cerca de su valor base: el precio parece justo, pero sin margen de seguridad", "Está muy cara", "Vale exactamente 18,30 €"],
+    "answer": 1,
+    "why": "Un margen del 1,6 % es prácticamente nulo. El precio no es exagerado, pero tampoco deja espacio para errores si el futuro sale peor de lo previsto."
+  }
+]
+-->

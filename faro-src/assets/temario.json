@@ -25,9 +25,24 @@
       "n": 2,
       "title": "Cuánto vale una empresa",
       "level": "medio",
-      "available": false,
-      "lessonCount": 14,
-      "topics": ["Múltiplos: PER, EV/EBITDA, precio/valor contable", "Descuento de flujos paso a paso", "Margen de seguridad"]
+      "available": true,
+      "summary": "Valora una empresa con múltiplos y con descuento de flujos, mide cuánto dependen tus cifras de las hipótesis y decide qué margen de seguridad exigir.",
+      "lessons": [
+        { "id": "m2-01", "title": "Precio y valor no son lo mismo", "minutes": 10 },
+        { "id": "m2-02", "title": "Capitalización y valor de empresa", "minutes": 11 },
+        { "id": "m2-03", "title": "El PER: cuántos años de beneficio pagas", "minutes": 12 },
+        { "id": "m2-04", "title": "PER y crecimiento: el PEG y sus trampas", "minutes": 11 },
+        { "id": "m2-05", "title": "EV/EBITDA y EV/EBIT", "minutes": 12 },
+        { "id": "m2-06", "title": "Precio/valor contable y rentabilidad", "minutes": 11 },
+        { "id": "m2-07", "title": "Rentabilidad por dividendo y por flujo de caja", "minutes": 11 },
+        { "id": "m2-08", "title": "Valorar con comparables", "minutes": 13 },
+        { "id": "m2-09", "title": "El valor del dinero en el tiempo", "minutes": 11 },
+        { "id": "m2-10", "title": "La tasa de descuento: el coste del capital", "minutes": 13 },
+        { "id": "m2-11", "title": "Descuento de flujos (I): proyectar los flujos", "minutes": 14 },
+        { "id": "m2-12", "title": "Descuento de flujos (II): valor terminal y valor por acción", "minutes": 14 },
+        { "id": "m2-13", "title": "Sensibilidad: qué hipótesis mueven el valor", "minutes": 12 },
+        { "id": "m2-14", "title": "Margen de seguridad: ¿está cara Cafés Montaña?", "minutes": 15 }
+      ]
     },
     {
       "n": 3,

@@ -123,6 +123,8 @@ a.card:hover { transform: translateY(-4px); border-color: var(--gold); }
 .prose th:first-child, .prose td:first-child { text-align: left; }
 .prose thead th { background: var(--paper-2); }
 .prose .table--text th, .prose .table--text td { text-align: left; vertical-align: top; }
+.table-scroll { overflow-x: auto; margin: 1.4em 0; }
+.table-scroll table { margin: 0; min-width: 560px; }
 .callout { padding: 18px 22px; border-radius: 14px; background: #fffbea; border: 1px solid #f1dd95; margin: 1.6em 0; }
 .callout strong { color: #8a6a00; }
 .toc { position: sticky; top: 100px; padding: 22px; border-radius: 16px; background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow); }

@@ -1,0 +1,77 @@
+<p>Para descontar los flujos de una empresa necesitas una tasa: la rentabilidad mínima que exigen quienes la financian, dado su riesgo. Se llama coste del capital. Si la empresa no consigue rendir al menos eso, sus inversores estarían mejor en otra parte.</p>
+
+<h2 id="coste-oportunidad">Un coste de oportunidad</h2>
+<p>Nadie le pasa una factura a Cafés Montaña por usar el dinero de sus accionistas. Pero ese dinero podría estar invertido en otra cosa con un riesgo parecido, y esa rentabilidad que se pierde es su coste. Una empresa más arriesgada tiene un coste del capital más alto, porque sus inversores exigen más a cambio de aceptar ese riesgo.</p>
+
+<h2 id="fondos-propios">El coste de los fondos propios</h2>
+<p>El método más extendido es el modelo CAPM:</p>
+<code class="formula-box">Coste de los fondos propios = tipo sin riesgo + beta × prima de riesgo del mercado</code>
+<ul>
+  <li><strong>Tipo sin riesgo:</strong> lo que rinde un bono del Estado a largo plazo. Supondremos un 3 %.</li>
+  <li><strong>Prima de riesgo del mercado:</strong> lo que se exige de más por invertir en bolsa en lugar de en bonos. Suele estimarse entre el 4 % y el 6 %; usaremos un 6 %.</li>
+  <li><strong><a href="/glosario.html#beta">Beta</a>:</strong> cuánto se mueve la acción respecto al mercado. Una beta de 1 se mueve como el mercado; de 1,5, un 50 % más.</li>
+</ul>
+<p>Con una beta de 1, el coste de los fondos propios de Cafés Montaña es 3 % + 1 × 6 % = <strong>9 %</strong>.</p>
+<p>Todos estos datos son estimaciones discutibles. Muchos inversores particulares simplifican y usan directamente la rentabilidad que exigen a cualquier acción, por ejemplo entre el 8 % y el 10 %. Es una opción razonable si eres coherente.</p>
+
+<h2 id="deuda">El coste de la deuda</h2>
+<p>Es más fácil de estimar: lo que la empresa paga por sus préstamos. Cafés Montaña paga unos 4 M€ de intereses por unos 61 M€ de deuda: alrededor de un <strong>6,5 %</strong>. Como los intereses reducen el impuesto sobre beneficios, el coste real es menor: 6,5 % × (1 − 0,25) ≈ <strong>4,9 %</strong>.</p>
+
+<h2 id="wacc">El coste medio ponderado del capital (WACC)</h2>
+<p>La empresa se financia con las dos fuentes, así que su coste total es la media ponderada de ambas, usando valores de mercado:</p>
+<code class="formula-box">WACC = % fondos propios × su coste + % deuda × coste de la deuda después de impuestos</code>
+<table>
+  <thead><tr><th>Cafés Montaña</th><th>Valor (M€)</th><th>Peso</th><th>Coste</th></tr></thead>
+  <tbody>
+    <tr><td>Fondos propios (capitalización)</td><td>180</td><td>79,6 %</td><td>9,0 %</td></tr>
+    <tr><td>Deuda neta</td><td>46</td><td>20,4 %</td><td>4,9 %</td></tr>
+    <tr><td><strong>WACC</strong></td><td>226</td><td>100 %</td><td><strong>8,2 %</strong></td></tr>
+  </tbody>
+</table>
+<p>79,6 % × 9 % + 20,4 % × 4,9 % ≈ 8,2 %. Para no dar una falsa sensación de precisión, en las próximas lecciones usaremos un <strong>8 %</strong>. Es la cifra que ya mencionamos en el módulo 1 al comparar el ROIC de Cafés Montaña con su coste del capital.</p>
+
+<h2 id="coherencia">Cada flujo con su tasa</h2>
+<p>La misma regla de coherencia de la lección 2 aplicada a las tasas:</p>
+<ul>
+  <li>Los <strong>flujos para toda la empresa</strong> (antes de pagar a los bancos) se descuentan con el <strong>WACC</strong> y dan el valor de empresa.</li>
+  <li>Los <strong>flujos solo para el accionista</strong> (dividendos, o flujos después de intereses) se descuentan con el <strong>coste de los fondos propios</strong> y dan directamente el valor de las acciones.</li>
+</ul>
+<p>En este módulo usaremos el primer camino, el más habitual.</p>
+<div class="callout"><strong>Un punto de diferencia importa mucho.</strong> Como el valor depende sobre todo de flujos lejanos, pasar de un 8 % a un 9 % puede bajar el valor de una empresa un 20 %. Lo comprobarás en la lección 13.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>El coste del capital es la rentabilidad mínima que exigen accionistas y acreedores por su riesgo.</li>
+  <li>Fondos propios: tipo sin riesgo + beta × prima de mercado. Cafés Montaña: 9 %.</li>
+  <li>Deuda: tipo de interés × (1 − impuestos). Cafés Montaña: 4,9 %.</li>
+  <li>WACC: media ponderada de ambos. Cafés Montaña: 8,2 %, que redondeamos al 8 %.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "El tipo sin riesgo es el 2 %, la beta de una acción es 1,5 y la prima de riesgo del mercado es el 6 %. ¿Cuál es el coste de los fondos propios?",
+    "options": ["8 %", "9,5 %", "11 %", "12 %"],
+    "answer": 2,
+    "why": "2 % + 1,5 × 6 % = 2 % + 9 % = 11 %."
+  },
+  {
+    "q": "Una empresa paga un 8 % de interés por su deuda y su tipo impositivo es el 25 %. ¿Cuál es el coste de la deuda después de impuestos?",
+    "options": ["2 %", "6 %", "8 %", "10 %"],
+    "answer": 1,
+    "why": "8 % × (1 − 0,25) = 6 %. Los intereses reducen el impuesto que paga la empresa."
+  },
+  {
+    "q": "Una empresa se financia a medias con fondos propios (coste del 10 %) y con deuda (coste después de impuestos del 4 %). ¿Cuál es su WACC?",
+    "options": ["5 %", "7 %", "10 %", "14 %"],
+    "answer": 1,
+    "why": "WACC = 50 % × 10 % + 50 % × 4 % = 5 % + 2 % = 7 %."
+  },
+  {
+    "q": "Si una empresa se vuelve más arriesgada, ¿qué ocurre con su coste del capital y con su valor?",
+    "options": ["El coste baja y el valor sube", "El coste sube y el valor baja", "Ninguno cambia", "Los dos suben"],
+    "answer": 1,
+    "why": "Los inversores exigen más rentabilidad por más riesgo. Una tasa de descuento más alta reduce el valor presente de los flujos futuros."
+  }
+]
+-->

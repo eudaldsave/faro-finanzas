@@ -1,0 +1,74 @@
+<p>Has proyectado los cinco primeros años de Cafés Montaña. Pero la empresa seguirá funcionando después de 2030, y ese futuro lejano es, con diferencia, la parte que más pesa en su valor. En esta lección lo calculas y llegas al valor por acción.</p>
+
+<h2 id="valor-terminal">El valor terminal</h2>
+<p>A partir del año 6 se supone que la empresa es madura y crece a un ritmo estable para siempre. Su valor se calcula con la perpetuidad creciente de la lección 9:</p>
+<code class="formula-box">Valor terminal (al final del año 5) = flujo del año 6 / (WACC − crecimiento a perpetuidad)</code>
+<p><strong>El crecimiento a perpetuidad</strong> debe ser modesto: ninguna empresa puede crecer para siempre más que la economía, porque acabaría siendo más grande que ella. Lo habitual es usar entre el 1,5 % y el 2,5 %, cerca de la inflación esperada o del crecimiento nominal a largo plazo. Usaremos un <strong>2 %</strong>.</p>
+
+<h2 id="flujo-6">El flujo del año 6: crece menos, reinvierte menos</h2>
+<p>Al pasar a crecer solo un 2 %, Cafés Montaña ya no necesita reinvertir la mitad de su NOPAT. Con la relación de la lección anterior y el mismo ROIC del 12 %: 2 % / 12 % = <strong>16,7 %</strong> de reinversión.</p>
+<ul>
+  <li>NOPAT del año 6: 20,07 × 1,02 = 20,47 M€.</li>
+  <li>Flujo de caja libre: 20,47 × (1 − 0,167) = <strong>17,06 M€</strong>.</li>
+</ul>
+<p>El flujo salta de 10,04 a 17,06 M€. No es un error: cuando deja de abrir tantas cafeterías, libera la caja que antes reinvertía.</p>
+
+<h2 id="calculo">Del valor terminal al valor por acción</h2>
+<table>
+  <thead><tr><th>Cafés Montaña, caso base</th><th>Cálculo</th><th>M€</th></tr></thead>
+  <tbody>
+    <tr><td>Valor terminal en 2030</td><td>17,06 / (0,08 − 0,02)</td><td>284,37</td></tr>
+    <tr><td>Valor presente del valor terminal</td><td>284,37 × 0,6806</td><td>193,54</td></tr>
+    <tr><td>+ Valor presente de los años 1 a 5</td><td>lección 11</td><td>35,47</td></tr>
+    <tr><td><strong>Valor de empresa</strong></td><td></td><td><strong>229,01</strong></td></tr>
+    <tr><td>− Deuda neta</td><td></td><td>−46,00</td></tr>
+    <tr><td><strong>Valor de las acciones</strong></td><td></td><td><strong>183,01</strong></td></tr>
+    <tr><td><strong>Valor por acción</strong></td><td>183,01 / 10 millones</td><td><strong>18,30 €</strong></td></tr>
+  </tbody>
+</table>
+<p>El valor terminal se descuenta con el factor del año 5 (0,6806), porque está calculado a final de 2030. Y como el flujo de la empresa se descontó con el WACC, el resultado es el valor de empresa: hay que restar la deuda neta para llegar a los accionistas, como en la lección 8.</p>
+
+<h2 id="peso">El 84,5 % del valor está después de 2030</h2>
+<p>El valor terminal aporta 193,54 de los 229,01 M€: un <strong>84,5 %</strong>. Es lo normal en una empresa que todavía crece, y tiene una consecuencia incómoda: el resultado depende sobre todo de dos hipótesis sobre el futuro lejano, el WACC y el crecimiento a perpetuidad. En la próxima lección verás cuánto.</p>
+
+<h2 id="calculadora">Comprueba con la calculadora</h2>
+<p>La <a href="/herramientas/dcf.html">calculadora de descuento de flujos</a> de la web usa un modelo más sencillo: hace crecer el flujo actual al mismo ritmo durante cinco años y calcula el valor terminal con ese mismo flujo. Si introduces los datos de Cafés Montaña (flujo actual 7, crecimiento 6 %, perpetuidad 2 %, WACC 8 %, deuda neta 46, 10 millones de acciones), obtendrás unos <strong>9,55 €</strong> por acción.</p>
+<p>¿Por qué tanta diferencia? Porque ese modelo supone que Cafés Montaña seguirá reinvirtiendo la mitad de su NOPAT para siempre, aunque solo crezca un 2 %. Es decir, que gastará en crecer sin conseguir el crecimiento. En empresas que reinvierten mucho, ese atajo infravalora; en empresas que apenas reinvierten, los dos modelos dan resultados parecidos.</p>
+<div class="callout"><strong>Toda herramienta lleva hipótesis dentro.</strong> Usa la calculadora para practicar y para ver cómo cambia el valor con cada dato, pero pregúntate siempre qué supone el modelo. Esa pregunta vale más que cualquier cifra.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>Valor terminal = flujo del año 6 / (WACC − crecimiento a perpetuidad), con un crecimiento modesto, entre el 1,5 % y el 2,5 %.</li>
+  <li>Cuando el crecimiento baja, baja la reinversión y sube el flujo de caja libre.</li>
+  <li>Cafés Montaña, caso base: valor de empresa de 229 M€ y 18,30 € por acción.</li>
+  <li>El valor terminal supone el 84,5 % del total: el resultado depende mucho de las hipótesis a largo plazo.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "El flujo de caja libre del año 6 es 10, el WACC es el 9 % y el crecimiento a perpetuidad es el 3 %. ¿Cuál es el valor terminal al final del año 5?",
+    "options": ["111,11", "166,67", "333,33", "83,33"],
+    "answer": 1,
+    "why": "Valor terminal = 10 / (0,09 − 0,03) = 10 / 0,06 = 166,67."
+  },
+  {
+    "q": "Una empresa tiene un valor de empresa de 500 M€, una deuda neta de 100 M€ y 20 millones de acciones. ¿Cuál es su valor por acción?",
+    "options": ["25 €", "20 €", "30 €", "5 €"],
+    "answer": 1,
+    "why": "Valor de las acciones = 500 − 100 = 400 M€. Por acción: 400 / 20 = 20 €."
+  },
+  {
+    "q": "¿Por qué el crecimiento a perpetuidad no debe superar el crecimiento a largo plazo de la economía?",
+    "options": ["Porque lo prohíbe la normativa contable", "Porque una empresa que creciera siempre más que la economía acabaría siendo más grande que ella", "Porque el WACC sería negativo", "Porque así lo exige la calculadora"],
+    "answer": 1,
+    "why": "Un crecimiento perpetuo por encima del de la economía es imposible a muy largo plazo. Por eso se usan tasas modestas, cercanas a la inflación o al crecimiento nominal."
+  },
+  {
+    "q": "En una valoración, el valor terminal supone el 85 % del valor de empresa. ¿Qué implica?",
+    "options": ["Que la valoración es muy segura", "Que el resultado depende mucho de las hipótesis a largo plazo, como el WACC y el crecimiento a perpetuidad", "Que hay un error de cálculo", "Que los cinco primeros años no importan nada"],
+    "answer": 1,
+    "why": "Si casi todo el valor viene del futuro lejano, pequeñas variaciones en esas hipótesis cambian mucho el resultado. Por eso hay que estudiar la sensibilidad."
+  }
+]
+-->

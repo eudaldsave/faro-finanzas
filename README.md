@@ -69,4 +69,4 @@ La URL y la clave publicable de Supabase están en `faro-src/assets/auth.js`. So
 - Páginas legales: plantillas con huecos en amarillo; revisar con un profesional. Ahora la web guarda cuentas de usuario: la política de privacidad debe mencionarlo.
 - Correo de Supabase: el servicio de correo incluido solo envía a los miembros de tu organización de Supabase y con un límite bajo por hora. Configura un SMTP propio (Authentication → Emails) antes de abrir el registro al público.
 - Envío de la guía por email y pagos: solo interfaz, sin backend.
-- Curso: solo el módulo 1 tiene lecciones. Los módulos 2 a 5 aparecen como «Próximamente» en Mi curso, pero la portada y la página de precios los venden como parte del plan Completo.
+- Curso: los módulos 1 y 2 tienen lecciones y cualquier usuario con cuenta puede verlas, porque todavía no hay pagos. La portada y la página de precios venden los módulos 2 a 5 como parte del plan Completo: cuando haya pagos, `/api/leccion` tendrá que comprobar el plan del alumno además de su sesión. Los módulos 3 a 5 aparecen como «Próximamente».

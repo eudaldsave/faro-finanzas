@@ -40,9 +40,9 @@
     const cont = document.getElementById('course-continue');
 
     document.getElementById('course-title').innerHTML = `Hola, <span class="gold">${escape(course.displayName(session))}</span>`;
-    let lead = `Has completado ${done} de ${lessons.length} lecciones del módulo 1.`;
+    let lead = `Has completado ${done} de ${lessons.length} lecciones.`;
     if (done === 0) lead = 'Empieza por la primera lección del módulo 1. Cada una dura entre 10 y 15 minutos y termina con un test.';
-    if (!next) lead = `Has completado las ${lessons.length} lecciones del módulo 1. ¡Enhorabuena!`;
+    if (!next) lead = `Has completado las ${lessons.length} lecciones disponibles. ¡Enhorabuena!`;
     document.getElementById('course-lead').textContent = lead;
 
     bar.hidden = false;
@@ -52,7 +52,7 @@
 
     cont.hidden = false;
     cont.href = `leccion.html?id=${(next || lessons[0]).id}`;
-    if (next && done > 0) cont.textContent = `Continuar: lección ${next.n} →`;
+    if (next && done > 0) cont.textContent = `Continuar: módulo ${next.module.n}, lección ${next.n} →`;
     if (!next) cont.textContent = 'Repasar desde el principio →';
   }
 
@@ -69,7 +69,7 @@
     return `<section class="course-module">
         <header class="course-module__head">
           <span class="module__n">${m.n}</span>
-          <div><h2>${escape(m.title)}</h2><small>${m.lessons.length} lecciones · nivel ${m.level} · ${session ? `${doneHere} completadas` : 'gratis'}</small></div>
+          <div><h2>${escape(m.title)}</h2><small>${m.lessons.length} lecciones · nivel ${m.level}${session ? ` · ${doneHere} completadas` : ''}</small></div>
         </header>
         <p class="course-module__summary">${escape(m.summary)}</p>
         <ol class="lessons">${rows}</ol>

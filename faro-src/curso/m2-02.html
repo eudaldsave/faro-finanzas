@@ -1,0 +1,76 @@
+<p>La capitalización dice cuánto cuestan las acciones. Pero si compraras la empresa entera, también te quedarías con sus deudas y con su caja. Por eso los analistas usan otra medida para saber cuánto cuesta el negocio completo: el valor de empresa.</p>
+
+<h2 id="casa">La analogía de la casa</h2>
+<p>Quieres comprar una casa que tiene una hipoteca pendiente de 100.000 €. El dueño te pide 200.000 € y, además, tendrás que hacerte cargo de la hipoteca. ¿Cuánto te cuesta la casa en realidad? <strong>300.000 €</strong>. Si además dentro hubiera 10.000 € en efectivo que pasan a ser tuyos, el coste real bajaría a 290.000 €.</p>
+<p>Con las empresas ocurre lo mismo: la capitalización es lo que pagas a los accionistas, pero el comprador asume la deuda y se queda con la caja.</p>
+
+<h2 id="ev">El valor de empresa (EV)</h2>
+<code class="formula-box">Valor de empresa (EV) = capitalización + deuda neta</code>
+<p>Recuerda que la deuda neta es la deuda financiera menos el efectivo (módulo 1, lección 3). Para Cafés Montaña:</p>
+<table>
+  <thead><tr><th>Cafés Montaña</th><th>M€</th></tr></thead>
+  <tbody>
+    <tr><td>Capitalización (18 € × 10 millones de acciones)</td><td>180</td></tr>
+    <tr><td>+ Deuda financiera</td><td>61</td></tr>
+    <tr><td>− Efectivo</td><td>−15</td></tr>
+    <tr><td><strong>Valor de empresa</strong></td><td><strong>226</strong></td></tr>
+  </tbody>
+</table>
+<p>Una empresa con más efectivo que deuda tiene deuda neta negativa, y su valor de empresa es menor que su capitalización.</p>
+<p>En empresas reales a veces se hacen más ajustes: se suman los socios minoritarios de las filiales y los pasivos por arrendamiento (si se usa un EBITDA que ya no incluye los alquileres), y se restan las participaciones en otras empresas. Lo importante es la idea: <strong>el EV mide lo que vale el negocio para todos los que lo financian</strong>, accionistas y acreedores.</p>
+
+<h2 id="regla">La regla de oro: numerador y denominador a juego</h2>
+<p>Cada medida de valor tiene que dividirse por una medida de resultado que corresponda a las mismas personas:</p>
+<table class="table--text">
+  <thead><tr><th>Medida de valor</th><th>Para quién</th><th>Se compara con</th></tr></thead>
+  <tbody>
+    <tr><td>Capitalización (o precio por acción)</td><td>Solo accionistas</td><td>Beneficio neto, BPA, dividendos, flujo de caja del accionista</td></tr>
+    <tr><td>Valor de empresa (EV)</td><td>Accionistas y acreedores</td><td>Ventas, EBITDA, EBIT: resultados antes de pagar intereses</td></tr>
+  </tbody>
+</table>
+<p>El beneficio neto ya ha descontado los intereses que se pagan a los bancos, así que se compara con la capitalización. El EBITDA y el EBIT todavía no, así que se comparan con el EV. Mezclarlos (por ejemplo, capitalización / EBITDA) da resultados engañosos.</p>
+
+<h2 id="por-que">Por qué importa: dos empresas con distinta deuda</h2>
+<p>Dos cadenas de cafeterías tienen el mismo negocio y el mismo EBITDA, 30 M€. La primera no tiene deuda y capitaliza 226 M€. La segunda tiene una deuda neta de 100 M€ y capitaliza 126 M€.</p>
+<ul>
+  <li>Si solo miras la capitalización, la segunda parece mucho más barata.</li>
+  <li>Su valor de empresa es el mismo: 226 + 0 = 126 + 100 = 226 M€. Por el negocio se paga lo mismo; la segunda simplemente está financiada con más deuda y es más arriesgada para el accionista.</li>
+</ul>
+<div class="callout"><strong>Comprar barato con deuda no es comprar barato.</strong> Una empresa muy endeudada puede tener una capitalización pequeña y parecer una ganga. El valor de empresa pone las cosas en su sitio.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>EV = capitalización + deuda neta. Cafés Montaña: 180 + 46 = 226 M€.</li>
+  <li>El EV mide el valor del negocio para accionistas y acreedores.</li>
+  <li>Capitalización con beneficio neto o BPA; EV con ventas, EBITDA o EBIT.</li>
+  <li>El EV permite comparar empresas con distinta deuda.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "Una empresa capitaliza 500 M€, tiene una deuda financiera de 200 M€ y un efectivo de 50 M€. ¿Cuál es su valor de empresa?",
+    "options": ["750 M€", "650 M€", "550 M€", "500 M€"],
+    "answer": 1,
+    "why": "EV = capitalización + deuda financiera − efectivo = 500 + 200 − 50 = 650 M€."
+  },
+  {
+    "q": "¿Con cuál de estas medidas se compara el valor de empresa (EV)?",
+    "options": ["El beneficio neto", "El BPA", "El EBITDA", "El dividendo por acción"],
+    "answer": 2,
+    "why": "El EV incluye a accionistas y acreedores, así que se compara con resultados anteriores al pago de intereses, como el EBITDA o el EBIT."
+  },
+  {
+    "q": "Una empresa tiene mucho más efectivo que deuda. ¿Cómo es su valor de empresa respecto a su capitalización?",
+    "options": ["Mayor", "Menor", "Igual", "No se puede calcular"],
+    "answer": 1,
+    "why": "Su deuda neta es negativa, así que al sumarla a la capitalización el EV queda por debajo. Quien comprara la empresa recuperaría parte del precio con esa caja."
+  },
+  {
+    "q": "Dos empresas con el mismo EBITDA tienen el mismo EV, pero una tiene mucha más deuda y menor capitalización. ¿Qué conclusión es correcta?",
+    "options": ["La endeudada es más barata", "Por el negocio se paga lo mismo; la endeudada solo es más arriesgada para el accionista", "La que no tiene deuda es peor negocio", "El EV no sirve para comparar"],
+    "answer": 1,
+    "why": "Mismo EV y mismo EBITDA significan el mismo precio por el negocio. La diferencia está en cómo se financia, y más deuda implica más riesgo para el accionista."
+  }
+]
+-->

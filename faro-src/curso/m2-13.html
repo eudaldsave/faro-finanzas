@@ -1,0 +1,80 @@
+<p>El caso base de Cafés Montaña da 18,30 € por acción. Pero ese número sale de varias hipótesis, y ninguna es segura. Antes de fiarte de una valoración, tienes que saber qué hipótesis la mueven más y cuánto. Es el análisis de sensibilidad.</p>
+
+<h2 id="wacc-g">WACC y crecimiento a perpetuidad</h2>
+<p>Valor por acción de Cafés Montaña al cambiar las dos hipótesis del valor terminal, manteniendo el resto del caso base:</p>
+<table>
+  <thead><tr><th>WACC \ perpetuidad</th><th>1,5 %</th><th>2,0 %</th><th>2,5 %</th></tr></thead>
+  <tbody>
+    <tr><td>7 %</td><td>22,2 €</td><td>23,4 €</td><td>24,9 €</td></tr>
+    <tr><td>8 %</td><td>17,6 €</td><td><strong>18,3 €</strong></td><td>19,1 €</td></tr>
+    <tr><td>9 %</td><td>14,3 €</td><td>14,7 €</td><td>15,1 €</td></tr>
+  </tbody>
+</table>
+<p>Con hipótesis todas razonables, el valor va de 14,3 a 24,9 €. Y el WACC es lo que más pesa: pasar del 8 % al 9 % baja el valor de 18,3 a 14,7 €, casi un 20 %. Por eso conviene no presentar nunca un único número.</p>
+
+<h2 id="crecimiento">El crecimiento de los próximos años</h2>
+<p>Ahora cambiamos el crecimiento de los cinco primeros años, con el WACC al 8 % y la perpetuidad al 2 %. Lo hacemos con dos ROIC distintos para las nuevas inversiones:</p>
+<div class="table-scroll"><table>
+  <thead><tr><th>Crecimiento años 1 a 5</th><th>0 %</th><th>4 %</th><th>6 %</th><th>8 %</th></tr></thead>
+  <tbody>
+    <tr><td>Con ROIC del 12 %</td><td>15,9 €</td><td>17,5 €</td><td><strong>18,3 €</strong></td><td>19,1 €</td></tr>
+    <tr><td>Con ROIC del 8 % (igual al WACC)</td><td>14,4 €</td><td>14,6 €</td><td>14,6 €</td><td>14,5 €</td></tr>
+  </tbody>
+</table></div>
+<p>Esta tabla resume una de las ideas más importantes de la inversión:</p>
+<ul>
+  <li><strong>Con un ROIC del 12 %</strong>, por encima del coste del capital, crecer más aumenta el valor.</li>
+  <li><strong>Con un ROIC del 8 %</strong>, igual al coste del capital, crecer no añade nada: cada euro invertido rinde justo lo que cuesta. El valor se queda en torno a 14,5 € crezca lo que crezca.</li>
+  <li>Si el ROIC fuera <strong>menor</strong> que el coste del capital, crecer destruiría valor: cuanto más creciera la empresa, menos valdría.</li>
+</ul>
+<p>Por eso el crecimiento por sí solo no justifica pagar más. Importa el crecimiento rentable.</p>
+<div class="callout"><strong>Lo que de verdad decide el valor.</strong> En Cafés Montaña, más que acertar con el crecimiento exacto, importa si sus nuevas cafeterías seguirán rindiendo claramente por encima del 8 %. Esa es la pregunta que conviene investigar: ¿qué rentabilidad tienen las aperturas recientes?</div>
+
+<h2 id="inverso">El descuento de flujos inverso</h2>
+<p>En lugar de calcular el valor a partir de tus hipótesis, puedes hacer el camino contrario: partir del precio y preguntarte qué hipótesis implica. A 18 €, el mercado está valorando Cafés Montaña aproximadamente como nuestro caso base: crecer en torno a un 6 % durante cinco años con un ROIC del 12 %, descontado al 8 %.</p>
+<p>La pregunta deja de ser «¿cuánto vale?» y pasa a ser «¿me parece alcanzable lo que el precio da por hecho?». Si el precio implicara un crecimiento del 15 % durante diez años con márgenes récord, sabrías que estás pagando por un escenario muy optimista.</p>
+
+<h2 id="buenas-practicas">Buenas prácticas</h2>
+<ul>
+  <li>Presenta siempre una tabla de sensibilidad o, al menos, un rango.</li>
+  <li>Dedica más tiempo a las hipótesis que más mueven el valor: aquí, el WACC y el ROIC de las nuevas inversiones.</li>
+  <li>Justifica cada hipótesis con datos del negocio (lo que ha hecho en el pasado, lo que hacen sus competidores), no con lo que te gustaría que pasara.</li>
+  <li>Desconfía cuando el valor solo sale bien con todas las hipótesis optimistas a la vez.</li>
+</ul>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>Con hipótesis razonables, el valor de Cafés Montaña va de unos 14 a unos 25 € por acción.</li>
+  <li>El WACC es la hipótesis que más pesa: del 8 % al 9 %, el valor cae casi un 20 %.</li>
+  <li>Crecer solo crea valor si el ROIC supera el coste del capital.</li>
+  <li>El descuento de flujos inverso pregunta qué hipótesis implica el precio actual.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "En la tabla de sensibilidad de Cafés Montaña, ¿qué hipótesis cambia más el valor?",
+    "options": ["El crecimiento a perpetuidad", "El WACC", "El número de acciones", "La deuda neta"],
+    "answer": 1,
+    "why": "Pasar del 8 % al 9 % de WACC baja el valor de 18,3 a 14,7 €, mientras que mover la perpetuidad medio punto lo cambia menos de 1 € con un WACC del 8 %."
+  },
+  {
+    "q": "Si el ROIC de las nuevas inversiones es igual al coste del capital, ¿qué efecto tiene crecer más deprisa sobre el valor?",
+    "options": ["Lo aumenta mucho", "Prácticamente ninguno", "Lo duplica", "Lo hace infinito"],
+    "answer": 1,
+    "why": "Cada euro invertido rinde justo lo que cuesta, así que el crecimiento no crea ni destruye valor. En la tabla, el valor se queda en torno a 14,5 € con cualquier crecimiento."
+  },
+  {
+    "q": "¿En qué consiste el descuento de flujos inverso?",
+    "options": ["En descontar los flujos empezando por el último año", "En partir del precio actual y averiguar qué hipótesis de crecimiento y rentabilidad implica", "En usar un WACC negativo", "En valorar solo el valor terminal"],
+    "answer": 1,
+    "why": "En lugar de calcular un valor, se pregunta qué tendría que pasar para que el precio actual fuera razonable, y si eso parece alcanzable."
+  },
+  {
+    "q": "Una valoración solo justifica el precio actual si el crecimiento, los márgenes y el WACC son todos optimistas a la vez. ¿Qué conviene pensar?",
+    "options": ["Que la acción es una buena oportunidad", "Que el precio da por hecho un escenario muy favorable y hay poco margen para errores", "Que el modelo está mal hecho", "Que hay que bajar el número de acciones"],
+    "answer": 1,
+    "why": "Si todo tiene que salir bien para justificar el precio, cualquier decepción hará que el valor quede por debajo. Es una señal de que el precio es exigente."
+  }
+]
+-->
