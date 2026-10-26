@@ -48,9 +48,21 @@
       "n": 3,
       "title": "Riesgo y volatilidad",
       "level": "medio",
-      "available": false,
-      "lessonCount": 11,
-      "topics": ["Volatilidad, caídas máximas y correlación", "Tamaño de posición", "Sesgos que nos hacen perder dinero"]
+      "available": true,
+      "summary": "Mide el riesgo de una inversión y de una cartera, decide cuánto poner en cada posición y reconoce los sesgos que llevan a tomar malas decisiones.",
+      "lessons": [
+        { "id": "m3-01", "title": "Qué es el riesgo al invertir", "minutes": 10 },
+        { "id": "m3-02", "title": "La volatilidad: cuánto se mueve una inversión", "minutes": 12 },
+        { "id": "m3-03", "title": "Caídas máximas y tiempo de recuperación", "minutes": 11 },
+        { "id": "m3-04", "title": "Correlación: por qué funciona diversificar", "minutes": 12 },
+        { "id": "m3-05", "title": "Riesgo de mercado y riesgo específico", "minutes": 11 },
+        { "id": "m3-06", "title": "Rentabilidad ajustada al riesgo: el ratio de Sharpe", "minutes": 11 },
+        { "id": "m3-07", "title": "El tamaño de cada posición", "minutes": 12 },
+        { "id": "m3-08", "title": "Cuánto riesgo puedes asumir", "minutes": 11 },
+        { "id": "m3-09", "title": "Sesgos que nos hacen perder dinero (I)", "minutes": 12 },
+        { "id": "m3-10", "title": "Sesgos que nos hacen perder dinero (II)", "minutes": 12 },
+        { "id": "m3-11", "title": "Caso práctico: el riesgo de una cartera con Cafés Montaña", "minutes": 14 }
+      ]
     },
     {
       "n": 4,

@@ -1,0 +1,76 @@
+<p>Se suele decir que la diversificación es lo único gratis en las finanzas: reduce el riesgo sin reducir necesariamente la rentabilidad esperada. Funciona gracias a una idea concreta, la correlación. Entenderla te permite diversificar de verdad, y no solo tener muchas cosas.</p>
+
+<h2 id="correlacion">Qué es la correlación</h2>
+<p>La correlación mide si dos inversiones tienden a moverse a la vez. Va de −1 a +1:</p>
+<ul>
+  <li><strong>+1:</strong> se mueven siempre en la misma dirección y proporción. Juntarlas no reduce el riesgo.</li>
+  <li><strong>0:</strong> sus movimientos no tienen relación.</li>
+  <li><strong>−1:</strong> cuando una sube, la otra baja. Juntarlas puede anular las oscilaciones.</li>
+</ul>
+<p>Dos acciones de bancos españoles suelen tener una correlación alta; la bolsa y los bonos de Estado, baja (el simulador de la web usa 0,1).</p>
+
+<h2 id="efecto">El efecto en una cartera</h2>
+<p>Dos inversiones con la misma volatilidad, un 20 %, mezcladas al 50 %. La volatilidad de la cartera depende solo de su correlación:</p>
+<table>
+  <thead><tr><th>Correlación</th><th>Volatilidad de la cartera 50/50</th></tr></thead>
+  <tbody>
+    <tr><td>+1</td><td>20,0 %</td></tr>
+    <tr><td>+0,5</td><td>17,3 %</td></tr>
+    <tr><td>0</td><td>14,1 %</td></tr>
+    <tr><td>−1</td><td>0 %</td></tr>
+  </tbody>
+</table>
+<p>La rentabilidad esperada de la mezcla es la media de las dos, pero su volatilidad es menor que la media en cuanto la correlación baja de 1. Esa diferencia es el beneficio gratis de diversificar.</p>
+<p>Para dos activos, la fórmula es:</p>
+<code class="formula-box">σ² = w₁²σ₁² + w₂²σ₂² + 2·w₁·w₂·ρ·σ₁·σ₂</code>
+<p>Donde <em>w</em> son los pesos, <em>σ</em> las volatilidades y <em>ρ</em> la correlación. No necesitas memorizarla: el simulador la aplica por ti.</p>
+
+<h2 id="bolsa-bonos">Bolsa y bonos: el ejemplo clásico</h2>
+<p>Una cartera con un 60 % en bolsa (volatilidad del 17 %) y un 40 % en bonos (6 %), con una correlación de 0,1:</p>
+<ul>
+  <li>Rentabilidad esperada: 0,6 × 7 % + 0,4 × 3 % = <strong>5,4 %</strong>.</li>
+  <li>Volatilidad: <strong>10,7 %</strong>, bastante menos que la media ponderada de las dos (12,6 %).</li>
+</ul>
+<p>Renuncias a parte de la rentabilidad de la bolsa a cambio de un camino mucho más suave. En la lección 6 verás que, por unidad de riesgo, esta mezcla es incluso mejor que la bolsa sola.</p>
+
+<h2 id="crisis">El problema: en las crisis, todo cae a la vez</h2>
+<p>Las correlaciones no son fijas. En los momentos de pánico, muchas inversiones que normalmente se mueven por separado caen juntas, porque todo el mundo vende a la vez. La diversificación entre acciones de distintos sectores ayuda menos justo cuando más falta hace.</p>
+<p>Por eso la diversificación más robusta combina tipos de activos distintos (acciones, bonos de calidad, liquidez) y no solo muchas acciones. E incluso entre bolsa y bonos la relación puede cambiar: en 2022, con la inflación disparada, ambos cayeron a la vez.</p>
+<div class="callout"><strong>Tener muchas cosas no es diversificar.</strong> Diez fondos que invierten en las mismas grandes tecnológicas de EE. UU. son, en la práctica, una sola apuesta. Lo que importa no es cuántas inversiones tienes, sino si se mueven de forma distinta.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>La correlación va de −1 a +1 y mide si dos inversiones se mueven a la vez.</li>
+  <li>Cuanto menor es la correlación, más baja la volatilidad de la mezcla sin bajar la rentabilidad esperada.</li>
+  <li>Una cartera 60/40 de bolsa y bonos: 5,4 % de rentabilidad esperada con un 10,7 % de volatilidad.</li>
+  <li>En las crisis las correlaciones suben: diversifica entre tipos de activos, no solo entre acciones.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "Dos inversiones tienen una correlación de +1. ¿Qué ocurre al combinarlas?",
+    "options": ["El riesgo desaparece", "El riesgo no se reduce: se mueven siempre juntas", "La rentabilidad se duplica", "La volatilidad se reduce a la mitad"],
+    "answer": 1,
+    "why": "Con correlación +1, las dos suben y bajan a la vez en la misma proporción. La volatilidad de la mezcla es la media de las dos: no hay beneficio de diversificación."
+  },
+  {
+    "q": "Mezclas al 50 % dos inversiones con un 20 % de volatilidad cada una y correlación 0. ¿Cuál es la volatilidad de la cartera?",
+    "options": ["20 %", "Unos 14 %", "10 %", "0 %"],
+    "answer": 1,
+    "why": "Con correlación 0, σ = √(0,25 × 400 + 0,25 × 400) = √200 ≈ 14,1 %. Menos que el 20 % de cada una."
+  },
+  {
+    "q": "¿Qué le pasa a la rentabilidad esperada de una cartera al diversificar entre activos poco correlacionados?",
+    "options": ["Se reduce siempre a cero", "Es la media ponderada de las rentabilidades de los activos: diversificar no la reduce por sí mismo", "Se multiplica", "Pasa a ser igual a la del activo más seguro"],
+    "answer": 1,
+    "why": "La rentabilidad esperada es la media ponderada. Lo que se reduce por debajo de la media es la volatilidad: por eso se dice que diversificar es lo único gratis."
+  },
+  {
+    "q": "Tienes cinco fondos distintos, pero todos invierten sobre todo en las mismas grandes tecnológicas. ¿Estás bien diversificado?",
+    "options": ["Sí, porque son cinco fondos", "No: sus inversiones están muy correlacionadas y en la práctica es una sola apuesta", "Sí, si son de gestoras distintas", "Depende de la comisión"],
+    "answer": 1,
+    "why": "Diversificar no depende del número de productos, sino de que se muevan de forma distinta. Cinco fondos con lo mismo dentro caerán a la vez."
+  }
+]
+-->

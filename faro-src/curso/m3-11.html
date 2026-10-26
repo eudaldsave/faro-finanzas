@@ -1,0 +1,98 @@
+<p>En esta última lección juntas todo el módulo en un caso. Lucía, una inversora inventada, tiene 30.000 € para invertir a largo plazo y quiere incluir Cafés Montaña, la empresa que analizaste y valoraste en los módulos anteriores. Vas a medir el riesgo de su cartera y a decidir cuánto debería pesar Cafés Montaña.</p>
+
+<h2 id="datos">Los datos</h2>
+<p>Usamos los supuestos del <a href="/herramientas/simulador-cartera.html">simulador de cartera</a> para la bolsa y los bonos. Para Cafés Montaña, la volatilidad típica de una acción individual y una rentabilidad esperada del 9 %: si cotiza cerca de su valor, como concluiste en el módulo 2, lo esperable es que rinda aproximadamente su coste de los fondos propios.</p>
+<table>
+  <thead><tr><th>Activo</th><th>Rentabilidad esperada</th><th>Volatilidad</th></tr></thead>
+  <tbody>
+    <tr><td>Fondo indexado de bolsa mundial</td><td>7 %</td><td>17 %</td></tr>
+    <tr><td>Fondo de bonos</td><td>3 %</td><td>6 %</td></tr>
+    <tr><td>Cafés Montaña</td><td>9 %</td><td>30 %</td></tr>
+  </tbody>
+</table>
+<p>Correlaciones: bolsa y bonos, 0,1; bolsa y Cafés Montaña, 0,6 (una acción se mueve bastante con su mercado); bonos y Cafés Montaña, prácticamente 0.</p>
+
+<h2 id="propuesta">La primera idea de Lucía</h2>
+<p>Lucía está entusiasmada con Cafés Montaña y propone: 60 % en el fondo de bolsa (18.000 €), 30 % en bonos (9.000 €) y 10 % en Cafés Montaña (3.000 €).</p>
+<table>
+  <thead><tr><th>Medida</th><th>Resultado</th></tr></thead>
+  <tbody>
+    <tr><td>Rentabilidad esperada</td><td>6,0 %</td></tr>
+    <tr><td>Volatilidad</td><td>12,5 %</td></tr>
+    <tr><td>Un año malo (1 de cada 40)</td><td>−19 %: unos −5.700 €</td></tr>
+    <tr><td>Crisis: bolsa −40 %, bonos +3 %, Cafés Montaña −55 %</td><td>−28,6 %: unos −8.600 €</td></tr>
+  </tbody>
+</table>
+<p>Primera pregunta: ¿puede Lucía ver 8.600 € menos en su cuenta sin vender? Con un horizonte largo, un fondo de emergencia aparte y, sobre todo, sabiendo de antemano que puede ocurrir, probablemente sí (lección 8). Si la respuesta fuera no, habría que subir el peso de los bonos.</p>
+
+<h2 id="posicion">El problema no está donde parece</h2>
+<p>Comparemos la cartera con y sin Cafés Montaña:</p>
+<table>
+  <thead><tr><th>Peso de Cafés Montaña</th><th>Volatilidad de la cartera</th><th>Si Cafés Montaña cae un 90 %</th></tr></thead>
+  <tbody>
+    <tr><td>10 % (3.000 €)</td><td>12,5 %</td><td>−9 % de la cartera: −2.700 €</td></tr>
+    <tr><td>4 % (1.200 €)</td><td>12,3 %</td><td>−3,6 %: −1.080 €</td></tr>
+    <tr><td>0 %</td><td>12,2 %</td><td>Nada</td></tr>
+  </tbody>
+</table>
+<p>La volatilidad total apenas cambia: en una cartera diversificada, una sola acción mueve poco la aguja en los días normales. El riesgo de Cafés Montaña está en otro sitio: en un problema propio de la empresa (un fraude, un fracaso de su expansión) que la hunda. Ese riesgo específico no se paga (lección 5) y es el que hay que limitar.</p>
+
+<h2 id="decision">La decisión</h2>
+<p>Lucía aplica la regla de la lección 7: no quiere perder más del 2 % de la cartera (600 €) con una sola empresa, y supone que en un escenario muy malo Cafés Montaña podría caer un 50 %. Peso máximo: 2 % / 50 % = <strong>4 %</strong>, es decir, 1.200 €. Los 1.800 € restantes los suma al fondo de bolsa.</p>
+<table>
+  <thead><tr><th>Cartera final</th><th>Peso</th><th>Importe</th></tr></thead>
+  <tbody>
+    <tr><td>Fondo indexado de bolsa mundial</td><td>66 %</td><td>19.800 €</td></tr>
+    <tr><td>Fondo de bonos</td><td>30 %</td><td>9.000 €</td></tr>
+    <tr><td>Cafés Montaña</td><td>4 %</td><td>1.200 €</td></tr>
+  </tbody>
+</table>
+<p>La rentabilidad esperada apenas baja (del 6,0 % al 5,9 %), la volatilidad es casi la misma (12,3 %) y el ratio de Sharpe no cambia (0,32). Pero el peor caso de una sola empresa pasa de costarle 2.700 € a 1.080 €. Lucía mantiene su apuesta por Cafés Montaña sin que un error en ella pueda hacerle mucho daño.</p>
+
+<h2 id="plan">Lo que Lucía escribe en su plan</h2>
+<ul>
+  <li><strong>Objetivo y horizonte:</strong> largo plazo, más de 10 años; fondo de emergencia aparte.</li>
+  <li><strong>Reparto:</strong> 66 % bolsa, 30 % bonos, 4 % Cafés Montaña.</li>
+  <li><strong>Límite:</strong> ninguna acción individual por encima del 5 %; si Cafés Montaña lo supera al revalorizarse, vende el exceso.</li>
+  <li><strong>Su tesis y cuándo se rompe:</strong> «Invierto porque crece con un ROIC del 12 %, por encima de su coste del capital. Si el ROIC de las nuevas cafeterías baja del 8 % o la deuda neta supera 3 veces el EBITDA, la revisaré.»</li>
+  <li><strong>Escenario de crisis aceptado:</strong> puede perder unos 8.300 € en una crisis fuerte. No venderá por una caída si la tesis sigue en pie.</li>
+  <li><strong>Revisión:</strong> una vez al trimestre, con los resultados de la empresa, no cada día.</li>
+</ul>
+<div class="callout"><strong>Formación, no recomendación.</strong> Lucía y Cafés Montaña son inventadas, y los porcentajes de su cartera ilustran un método, no son un reparto recomendado. Tu reparto depende de tu horizonte, tu capacidad y tu tolerancia al riesgo.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>Mide la cartera completa: rentabilidad esperada, volatilidad, un año malo y una crisis, en euros.</li>
+  <li>Una sola acción cambia poco la volatilidad total, pero su peor caso puede costar mucho.</li>
+  <li>Dimensiona cada acción por la pérdida que aceptas en su peor caso: Cafés Montaña, un 4 %.</li>
+  <li>Escribe el plan, la tesis y lo que la rompería antes de que el mercado te ponga a prueba.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "En la cartera de Lucía, ¿qué cambia más al bajar Cafés Montaña del 10 % al 4 %?",
+    "options": ["La volatilidad total, que se reduce a la mitad", "Lo que le costaría un hundimiento de esa empresa concreta", "La rentabilidad esperada, que cae a la mitad", "Nada"],
+    "answer": 1,
+    "why": "La volatilidad pasa solo del 12,5 % al 12,3 %, pero una caída del 90 % de Cafés Montaña pasaría de costar 2.700 € a 1.080 €. Lo que se limita es el riesgo específico."
+  },
+  {
+    "q": "Con 30.000 €, una pérdida máxima aceptable del 2 % por empresa y una caída posible del 50 %, ¿cuánto dinero debería tener como máximo en una acción?",
+    "options": ["600 €", "1.200 €", "3.000 €", "15.000 €"],
+    "answer": 1,
+    "why": "Peso máximo = 2 % / 50 % = 4 %; el 4 % de 30.000 € son 1.200 €. Si cayera un 50 %, perdería 600 €, el 2 % de la cartera."
+  },
+  {
+    "q": "¿Por qué se supone para Cafés Montaña una rentabilidad esperada cercana al 9 %?",
+    "options": ["Porque es la media histórica de la bolsa", "Porque si cotiza cerca de su valor, lo esperable es que rinda aproximadamente su coste de los fondos propios", "Porque es su margen neto", "Porque lo garantiza la empresa"],
+    "answer": 1,
+    "why": "Si el precio es justo, el inversor obtendrá aproximadamente la rentabilidad que exige el mercado por su riesgo, que en el módulo 2 estimamos en un 9 %."
+  },
+  {
+    "q": "¿Qué aporta escribir de antemano qué rompería la tesis de inversión?",
+    "options": ["Nada, solo es burocracia", "Ayuda a decidir con criterio en una caída: distinguir un problema real de la empresa del ruido del mercado", "Garantiza que la acción subirá", "Sustituye al análisis de las cuentas"],
+    "answer": 1,
+    "why": "Con la tesis por escrito, ante una caída puedes comprobar si ha cambiado algo del negocio. Protege tanto de vender por pánico como de aferrarse a un error."
+  }
+]
+-->

@@ -1,0 +1,79 @@
+<p>Dos fondos rinden de media un 7 % al año. Uno lo hace con altibajos suaves; el otro alterna años de +30 % con años de −20 %. A largo plazo pueden acabar parecido, pero la experiencia de tenerlos es muy distinta. La volatilidad mide esa diferencia.</p>
+
+<h2 id="que-es">Qué es la volatilidad</h2>
+<p>La <a href="/glosario.html#volatilidad">volatilidad</a> es la <strong>desviación típica</strong> de las rentabilidades: cuánto se alejan, en promedio, de su media. Se expresa en porcentaje anual. Cuanto más alta, más grandes son las subidas y bajadas habituales.</p>
+<p>No hace falta calcularla a mano. En una hoja de cálculo, con una columna de rentabilidades, la función <strong>DESVEST</strong> te la da. Y las fichas de los fondos suelen publicarla.</p>
+
+<h2 id="referencias">Volatilidades de referencia</h2>
+<table class="table--text">
+  <thead><tr><th>Activo</th><th>Volatilidad anual orientativa</th></tr></thead>
+  <tbody>
+    <tr><td>Depósitos y Letras del Tesoro</td><td>Casi nula</td></tr>
+    <tr><td>Bonos de Estado</td><td>En torno al 4–8 %</td></tr>
+    <tr><td>Bolsa de un índice amplio</td><td>En torno al 15–20 %</td></tr>
+    <tr><td>Acción de una sola empresa</td><td>Del 25 % al 40 %, o más</td></tr>
+  </tbody>
+</table>
+<p>El <a href="/herramientas/simulador-cartera.html">simulador de cartera</a> de la web usa un 17 % para la bolsa y un 6 % para los bonos. Usaremos esas mismas cifras en todo el módulo.</p>
+
+<h2 id="interpretar">Cómo se interpreta</h2>
+<p>Si las rentabilidades se repartieran como una campana (una distribución normal), se cumpliría aproximadamente:</p>
+<ul>
+  <li>Unos <strong>2 de cada 3 años</strong> la rentabilidad estaría a menos de una volatilidad de la media.</li>
+  <li>Unos <strong>19 de cada 20 años</strong>, a menos de dos volatilidades.</li>
+</ul>
+<p>Para la bolsa, con una rentabilidad esperada del 7 % y una volatilidad del 17 %:</p>
+<table>
+  <thead><tr><th>Frecuencia aproximada</th><th>Rango de rentabilidad anual</th></tr></thead>
+  <tbody>
+    <tr><td>2 de cada 3 años</td><td>Entre −10 % y +24 %</td></tr>
+    <tr><td>19 de cada 20 años</td><td>Entre −27 % y +41 %</td></tr>
+  </tbody>
+</table>
+<p>Fíjate en lo amplio que es el rango incluso para una cartera muy diversificada. Un año con un −20 % no es una anomalía en bolsa: entra dentro de lo esperable.</p>
+
+<h2 id="colas">El problema de las colas</h2>
+<p>Las rentabilidades reales no siguen exactamente una campana. Las caídas extremas son más frecuentes de lo que predice la distribución normal: los mercados tienen «colas gruesas». Por eso la volatilidad es útil para hacerse una idea del movimiento normal, pero subestima las crisis. Las caídas máximas, de la próxima lección, completan la foto.</p>
+
+<h2 id="anualizar">De mensual a anual</h2>
+<p>Si conoces la volatilidad de un periodo más corto, se pasa a anual multiplicando por la raíz cuadrada del número de periodos:</p>
+<code class="formula-box">Volatilidad anual ≈ volatilidad mensual × √12</code>
+<p>Una volatilidad mensual del 5 % equivale a unos 5 × 3,46 ≈ <strong>17,3 %</strong> anual. No se multiplica por 12 porque los meses buenos y malos se compensan en parte.</p>
+<div class="callout"><strong>Volatilidad no es lo mismo que pérdida.</strong> Una inversión muy volátil puede acabar ganando mucho, y una poco volátil puede perder poder de compra año tras año. La volatilidad describe lo accidentado del camino, no el destino.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>La volatilidad es la desviación típica de las rentabilidades, en porcentaje anual.</li>
+  <li>Bolsa amplia: en torno al 15–20 %; bonos de Estado: 4–8 %; una sola acción: 25–40 % o más.</li>
+  <li>Con 7 % de media y 17 % de volatilidad, 2 de cada 3 años la bolsa estaría entre −10 % y +24 %.</li>
+  <li>Las crisis son más frecuentes de lo que sugiere la campana: la volatilidad no lo cuenta todo.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "¿Qué mide la volatilidad?",
+    "options": ["La rentabilidad media", "Cuánto se alejan las rentabilidades de su media: lo accidentado del camino", "La comisión del fondo", "La probabilidad de quiebra"],
+    "answer": 1,
+    "why": "La volatilidad es la desviación típica de las rentabilidades. Mide el tamaño de las oscilaciones habituales, no si la inversión gana o pierde a largo plazo."
+  },
+  {
+    "q": "Un fondo tiene una rentabilidad esperada del 6 % y una volatilidad del 10 %. ¿Entre qué valores estaría su rentabilidad unos 2 de cada 3 años, aproximadamente?",
+    "options": ["Entre 0 % y 12 %", "Entre −4 % y +16 %", "Entre −14 % y +26 %", "Entre 6 % y 10 %"],
+    "answer": 1,
+    "why": "A una volatilidad de la media: 6 % − 10 % = −4 % y 6 % + 10 % = +16 %. A dos volatilidades (19 de cada 20 años) sería entre −14 % y +26 %."
+  },
+  {
+    "q": "Una acción tiene una volatilidad mensual del 8 %. ¿Cuál es su volatilidad anual aproximada?",
+    "options": ["8 %", "28 %", "96 %", "0,67 %"],
+    "answer": 1,
+    "why": "Volatilidad anual ≈ mensual × √12 = 8 % × 3,46 ≈ 28 %."
+  },
+  {
+    "q": "¿Por qué la volatilidad subestima el riesgo de las crisis?",
+    "options": ["Porque solo se calcula una vez al año", "Porque las caídas extremas son más frecuentes de lo que predice una distribución normal", "Porque no incluye los dividendos", "Porque solo sirve para bonos"],
+    "answer": 1,
+    "why": "Los mercados tienen colas gruesas: las caídas muy grandes ocurren con más frecuencia de lo que la campana sugiere. Por eso conviene mirar también las caídas máximas."
+  }
+]
+-->

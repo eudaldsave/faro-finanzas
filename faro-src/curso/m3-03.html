@@ -1,0 +1,75 @@
+<p>La volatilidad describe el movimiento habitual. Pero lo que pone a prueba a un inversor son los peores momentos: cuánto llegó a caer una inversión desde su máximo y cuánto tardó en recuperarse. Esa es la medida que mejor anticipa si serás capaz de mantener tu plan.</p>
+
+<h2 id="caida-maxima">La caída máxima</h2>
+<p>La <strong>caída máxima</strong> (en inglés, <em>maximum drawdown</em>) es la mayor pérdida desde un máximo hasta el mínimo posterior, antes de recuperar ese máximo. Si un fondo pasa de 100 a 60 y luego vuelve a 110, su caída máxima en ese periodo es del 40 %, aunque al final haya ganado.</p>
+<p>A diferencia de la volatilidad, se entiende sin estadística: es lo que habrías visto en tu cuenta en el peor momento.</p>
+
+<h2 id="asimetria">Las pérdidas pesan más que las ganancias</h2>
+<p>Después de caer, hace falta una subida mayor para volver al punto de partida:</p>
+<code class="formula-box">Subida necesaria = 1 / (1 − caída) − 1</code>
+<table>
+  <thead><tr><th>Caída</th><th>Subida necesaria para recuperar</th></tr></thead>
+  <tbody>
+    <tr><td>−10 %</td><td>+11,1 %</td></tr>
+    <tr><td>−20 %</td><td>+25,0 %</td></tr>
+    <tr><td>−30 %</td><td>+42,9 %</td></tr>
+    <tr><td>−40 %</td><td>+66,7 %</td></tr>
+    <tr><td>−50 %</td><td>+100,0 %</td></tr>
+    <tr><td>−80 %</td><td>+400,0 %</td></tr>
+  </tbody>
+</table>
+<p>Por eso evitar las pérdidas muy grandes aporta más que perseguir las ganancias muy grandes. Una cartera que cae un 50 % necesita duplicarse solo para volver a empezar.</p>
+
+<h2 id="historia">Lo que ha pasado en la historia</h2>
+<table class="table--text">
+  <thead><tr><th>Episodio</th><th>Caída aproximada</th><th>Tiempo hasta recuperar el máximo</th></tr></thead>
+  <tbody>
+    <tr><td>Bolsa de EE. UU. (S&amp;P 500), crisis financiera 2007–2009</td><td>Más del 50 %</td><td>Más de cinco años sin contar dividendos</td></tr>
+    <tr><td>S&amp;P 500, pandemia de 2020</td><td>Un 34 % en poco más de un mes</td><td>Unos seis meses</td></tr>
+    <tr><td>Nasdaq (tecnológicas), burbuja de 2000</td><td>Cerca del 78 %</td><td>Unos quince años</td></tr>
+    <tr><td>Bolsa de Japón (Nikkei), desde su máximo de 1989</td><td>Cerca del 80 % en su peor momento</td><td>Hasta 2024: unos 34 años</td></tr>
+  </tbody>
+</table>
+<p>Tres lecciones: las caídas grandes no son raras; su duración varía muchísimo; y concentrarse en un solo país o sector (Japón en 1989, las tecnológicas en 2000) puede alargar la recuperación durante décadas. Los dividendos reinvertidos y las aportaciones periódicas acortan bastante esos plazos, pero no eliminan el golpe.</p>
+
+<h2 id="ano-malo">Un año malo, en euros</h2>
+<p>El simulador de la web estima «un año malo (1 de cada 40)» restando dos volatilidades a la rentabilidad esperada. Para la bolsa: 7 % − 2 × 17 % = <strong>−27 %</strong>. Pasa los porcentajes a euros para entenderlos: con 30.000 € en bolsa, un año así son unos <strong>8.100 € menos</strong>. Y una caída como la de 2008, de la mitad: 15.000 €.</p>
+<p>Esta idea, cuánto dinero puedes perder en un escenario malo con cierta probabilidad, es la base del <a href="/glosario.html#var">VaR</a> que usan bancos y gestoras.</p>
+<div class="callout"><strong>La pregunta clave.</strong> No es «¿cuánto puedo ganar?», sino «si mañana mi inversión cae a la mitad y tarda cinco años en recuperarse, ¿podré esperar sin vender?». Si la respuesta es no, tu cartera tiene más riesgo del que puedes asumir (lo trabajarás en la lección 8).</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>La caída máxima es la mayor pérdida desde un máximo hasta el mínimo siguiente.</li>
+  <li>Tras caer un 50 %, hace falta subir un 100 % para recuperarse.</li>
+  <li>Las bolsas han caído más del 50 % varias veces, y la recuperación ha tardado de meses a décadas.</li>
+  <li>Traduce los escenarios malos a euros: así sabrás si puedes soportarlos.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "Un fondo pasa de 100 a 70, sube a 90, baja a 60 y termina el año en 105. ¿Cuál ha sido su caída máxima?",
+    "options": ["30 %", "40 %", "33 %", "Ninguna, porque acabó ganando"],
+    "answer": 1,
+    "why": "La mayor caída desde el máximo previo (100) es hasta 60: un 40 %. Que el fondo termine ganando no borra lo que llegó a caer por el camino."
+  },
+  {
+    "q": "Una inversión cae un 40 %. ¿Cuánto tiene que subir para volver al punto de partida?",
+    "options": ["40 %", "50 %", "66,7 %", "80 %"],
+    "answer": 2,
+    "why": "1 / (1 − 0,40) − 1 = 1 / 0,60 − 1 = 0,667, una subida del 66,7 %."
+  },
+  {
+    "q": "¿Qué enseña el caso de la bolsa de Japón desde 1989?",
+    "options": ["Que las bolsas siempre se recuperan en pocos años", "Que concentrarse en un solo mercado puede suponer décadas sin recuperar el máximo", "Que Japón es mala inversión siempre", "Que la volatilidad lo explica todo"],
+    "answer": 1,
+    "why": "El Nikkei tardó unos 34 años en volver a su máximo de 1989. Diversificar entre países y sectores reduce el riesgo de quedarse atrapado en un mercado concreto."
+  },
+  {
+    "q": "Tienes 20.000 € en bolsa. Con un «año malo» del −27 %, ¿cuánto perderías aproximadamente?",
+    "options": ["2.700 €", "5.400 €", "7.300 €", "14.600 €"],
+    "answer": 1,
+    "why": "20.000 × 0,27 = 5.400 €. Traducir los porcentajes a euros ayuda a saber si serías capaz de soportarlo sin vender."
+  }
+]
+-->

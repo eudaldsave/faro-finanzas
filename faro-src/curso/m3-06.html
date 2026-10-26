@@ -1,0 +1,78 @@
+<p>Un fondo ganó un 9 % al año y otro un 7 %. ¿Es mejor el primero? Depende de cuánto riesgo asumió cada uno para conseguirlo. Comparar rentabilidades sin mirar el riesgo es como comparar dos coches por su velocidad sin preguntar cuántas veces se salieron de la carretera.</p>
+
+<h2 id="sharpe">El ratio de Sharpe</h2>
+<p>El <a href="/glosario.html#sharpe">ratio de Sharpe</a> mide cuánta rentabilidad extra obtienes por cada unidad de volatilidad:</p>
+<code class="formula-box">Sharpe = (rentabilidad − tipo sin riesgo) / volatilidad</code>
+<ul>
+  <li><strong>Rentabilidad − tipo sin riesgo:</strong> lo que ganas por encima de lo que te daría una inversión sin riesgo a corto plazo, como las Letras del Tesoro. Usaremos un 2 %, como la liquidez del simulador.</li>
+  <li><strong>Volatilidad:</strong> el riesgo que asumiste para conseguirlo.</li>
+</ul>
+<p>Cuanto más alto, mejor: más rentabilidad por cada punto de riesgo.</p>
+
+<h2 id="dos-fondos">Dos fondos</h2>
+<table>
+  <thead><tr><th></th><th>Fondo A</th><th>Fondo B</th></tr></thead>
+  <tbody>
+    <tr><td>Rentabilidad anual</td><td>9 %</td><td>7 %</td></tr>
+    <tr><td>Volatilidad</td><td>18 %</td><td>10 %</td></tr>
+    <tr><td>Sharpe</td><td>(9 − 2) / 18 = 0,39</td><td>(7 − 2) / 10 = 0,50</td></tr>
+  </tbody>
+</table>
+<p>El fondo A gana más, pero el B obtiene más rentabilidad por cada unidad de riesgo: por cada punto de volatilidad, B aporta 0,50 puntos de rentabilidad por encima del tipo sin riesgo y A solo 0,39. A ha ganado más sobre todo porque ha arriesgado mucho más, y en un mal año caerá bastante más que B.</p>
+
+<h2 id="carteras">La diversificación, medida</h2>
+<p>Con los datos del simulador de la web:</p>
+<table>
+  <thead><tr><th>Cartera</th><th>Rentabilidad esperada</th><th>Volatilidad</th><th>Sharpe</th></tr></thead>
+  <tbody>
+    <tr><td>100 % bolsa</td><td>7,0 %</td><td>17,0 %</td><td>0,29</td></tr>
+    <tr><td>100 % bonos</td><td>3,0 %</td><td>6,0 %</td><td>0,17</td></tr>
+    <tr><td>60 % bolsa, 40 % bonos</td><td>5,4 %</td><td>10,7 %</td><td>0,32</td></tr>
+  </tbody>
+</table>
+<p>La mezcla tiene mejor Sharpe que cualquiera de sus dos partes por separado. Es el beneficio de la diversificación de la lección 4, expresado en un número.</p>
+
+<h2 id="limites">Límites del Sharpe</h2>
+<ul>
+  <li><strong>Usa la volatilidad</strong>, que trata igual las subidas que las bajadas y subestima las crisis (lección 2). Una variante, el <strong>ratio de Sortino</strong>, solo cuenta la volatilidad de las caídas.</li>
+  <li><strong>Mira al pasado.</strong> Un Sharpe alto en cinco años tranquilos puede esconder un riesgo que todavía no se ha manifestado, como el de una estrategia que gana poco a poco y de vez en cuando pierde mucho.</li>
+  <li><strong>Depende del periodo.</strong> El mismo fondo puede tener un Sharpe muy distinto según los años que elijas. Compara siempre fondos en el mismo periodo y, a ser posible, de varios años.</li>
+</ul>
+<div class="callout"><strong>Comisiones y Sharpe.</strong> Las comisiones restan rentabilidad sin reducir la volatilidad, así que empeoran directamente el Sharpe. Un fondo con un 1,5 % anual de gastos necesita ganar 1,5 puntos más que uno indexado solo para quedar igual.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>Sharpe = (rentabilidad − tipo sin riesgo) / volatilidad: rentabilidad extra por unidad de riesgo.</li>
+  <li>Más rentabilidad no siempre es mejor: compara la rentabilidad ajustada al riesgo.</li>
+  <li>Una cartera 60/40 tiene mejor Sharpe (0,32) que la bolsa sola (0,29) o los bonos solos (0,17).</li>
+  <li>El Sharpe mira al pasado y depende del periodo: úsalo con varios años y con otras medidas.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "Un fondo rinde un 8 % con una volatilidad del 12 %, y el tipo sin riesgo es del 2 %. ¿Cuál es su ratio de Sharpe?",
+    "options": ["0,67", "0,50", "0,83", "6"],
+    "answer": 1,
+    "why": "Sharpe = (8 − 2) / 12 = 6 / 12 = 0,50."
+  },
+  {
+    "q": "El fondo A rinde más que el B, pero tiene un Sharpe más bajo. ¿Qué significa?",
+    "options": ["Que A es mejor en todo", "Que A ha necesitado asumir proporcionalmente más riesgo para obtener su rentabilidad", "Que B ha perdido dinero", "Que hay un error en el cálculo"],
+    "answer": 1,
+    "why": "Un Sharpe más bajo indica menos rentabilidad extra por cada unidad de volatilidad: A gana más, pero a cambio de un riesgo desproporcionado."
+  },
+  {
+    "q": "¿Por qué una cartera 60/40 puede tener mejor Sharpe que la bolsa sola?",
+    "options": ["Porque rinde más que la bolsa", "Porque la diversificación reduce la volatilidad más de lo que reduce la rentabilidad", "Porque los bonos nunca caen", "Porque el tipo sin riesgo es menor"],
+    "answer": 1,
+    "why": "Como bolsa y bonos están poco correlacionados, la volatilidad de la mezcla baja mucho, mientras que la rentabilidad baja menos en proporción."
+  },
+  {
+    "q": "¿Cuál es una limitación importante del ratio de Sharpe?",
+    "options": ["Que no usa la rentabilidad", "Que trata igual subidas y bajadas y, al mirar al pasado, puede ocultar riesgos de crisis que aún no han ocurrido", "Que solo sirve para acciones españolas", "Que siempre da negativo"],
+    "answer": 1,
+    "why": "Usa la volatilidad, que no distingue subidas de bajadas y subestima las caídas extremas. Un historial tranquilo puede esconder un riesgo grande todavía no visto."
+  }
+]
+-->
