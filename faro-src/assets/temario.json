@@ -90,9 +90,20 @@
       "n": 5,
       "title": "Economía y ciclos",
       "level": "avanzado",
-      "available": false,
-      "lessonCount": 10,
-      "topics": ["Tipos de interés e inflación", "Cómo leer un dato macro sin ruido", "Ciclos económicos y sectores"]
+      "available": true,
+      "summary": "Entiende cómo la inflación, los tipos de interés y el ciclo económico afectan a las empresas y a tu cartera, y aprende a leer los datos sin dejarte llevar por el ruido.",
+      "lessons": [
+        { "id": "m5-01", "title": "La economía y la bolsa no son lo mismo", "minutes": 10 },
+        { "id": "m5-02", "title": "La inflación: qué es y cómo se mide", "minutes": 11 },
+        { "id": "m5-03", "title": "Los bancos centrales y los tipos de interés", "minutes": 12 },
+        { "id": "m5-04", "title": "Cómo afectan los tipos al valor de las inversiones", "minutes": 12 },
+        { "id": "m5-05", "title": "La inflación y tus inversiones", "minutes": 11 },
+        { "id": "m5-06", "title": "El ciclo económico", "minutes": 11 },
+        { "id": "m5-07", "title": "Sectores cíclicos y defensivos", "minutes": 11 },
+        { "id": "m5-08", "title": "Cómo leer un dato macro sin ruido", "minutes": 12 },
+        { "id": "m5-09", "title": "Previsiones y noticias: por qué no invertir según la macro", "minutes": 11 },
+        { "id": "m5-10", "title": "Caso final: Cafés Montaña ante una subida de tipos y una recesión", "minutes": 15 }
+      ]
     }
   ]
 }

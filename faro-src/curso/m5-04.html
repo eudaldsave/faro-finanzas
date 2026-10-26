@@ -1,0 +1,74 @@
+<p>¿Por qué cae la bolsa cuando suben los tipos de interés, si las empresas siguen vendiendo lo mismo? Ya tienes todas las piezas para entenderlo: el descuento de flujos del módulo 2. Los tipos de interés son la base de la tasa con la que se descuenta todo el dinero futuro.</p>
+
+<h2 id="mecanismo">El mecanismo</h2>
+<p>Recuerda cómo se construye el coste de los fondos propios (módulo 2, lección 10): tipo sin riesgo + beta × prima de riesgo. Si sube el tipo sin riesgo, sube la rentabilidad que exigen los inversores, sube la tasa de descuento y baja el valor presente de los flujos futuros.</p>
+<p>Además, hay un efecto directo: las empresas endeudadas pagan más intereses, y su beneficio baja.</p>
+
+<h2 id="montana">Cafés Montaña con un punto más de tipos</h2>
+<p>Si el tipo sin riesgo sube del 3 % al 4 %:</p>
+<ul>
+  <li>Su coste de los fondos propios pasa del 9 % al 10 %.</li>
+  <li>Su coste de la deuda también sube, y el WACC pasa de en torno al 8 % a en torno al 9 %.</li>
+  <li>Con el mismo negocio, su valor en el caso base baja de <strong>18,30 € a 14,70 €</strong> por acción: casi un 20 % menos (módulo 2, lección 13).</li>
+</ul>
+<p>Nada ha cambiado en sus cafeterías. Solo ha cambiado lo que valen hoy sus beneficios futuros.</p>
+
+<h2 id="duracion">Las acciones también tienen «duración»</h2>
+<p>En el módulo 4 viste que los bonos a largo plazo sufren más con las subidas de tipos. Con las acciones pasa algo parecido: cuanto más lejos en el futuro está el dinero que valoras, más le afecta la tasa de descuento.</p>
+<table>
+  <thead><tr><th>Valor hoy de 100 € que llegarán dentro de…</th><th>Descontando al 8 %</th><th>Al 9 %</th><th>Cambio</th></tr></thead>
+  <tbody>
+    <tr><td>5 años</td><td>68,06 €</td><td>64,99 €</td><td>−4,5 %</td></tr>
+    <tr><td>20 años</td><td>21,45 €</td><td>17,84 €</td><td>−16,8 %</td></tr>
+  </tbody>
+</table>
+<p>Por eso las empresas de <strong>crecimiento</strong>, cuyo valor depende de beneficios que llegarán dentro de muchos años, suelen caer más cuando suben los tipos, y subir más cuando bajan. Las empresas maduras que generan caja hoy son menos sensibles. Fue muy visible en 2022: las tecnológicas de crecimiento cayeron mucho más que la media.</p>
+
+<h2 id="quien">Quién sufre más y quién menos</h2>
+<table class="table--text">
+  <thead><tr><th>Más sensibles a una subida de tipos</th><th>Menos sensibles, o incluso beneficiados</th></tr></thead>
+  <tbody>
+    <tr><td>Bonos a largo plazo</td><td>Liquidez y bonos a corto plazo, que se renuevan pronto a tipos más altos</td></tr>
+    <tr><td>Empresas de crecimiento, con beneficios lejanos</td><td>Empresas maduras que generan caja hoy</td></tr>
+    <tr><td>Empresas muy endeudadas, sobre todo a tipo variable</td><td>Empresas con caja neta</td></tr>
+    <tr><td>Inmobiliarias, eléctricas y otras empresas con mucha deuda y rentas estables</td><td>Bancos, cuyo margen entre lo que cobran y lo que pagan suele mejorar al principio</td></tr>
+  </tbody>
+</table>
+<div class="callout"><strong>No es solo cuánto suben, sino por qué.</strong> Si los tipos suben porque la economía va muy bien, los mejores beneficios pueden compensar la mayor tasa de descuento. Si suben para frenar una inflación desbocada con la economía débil, el golpe es doble. El contexto importa tanto como el número.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>Más tipos significa una tasa de descuento más alta y valores presentes más bajos.</li>
+  <li>Con un punto más de tipo sin riesgo, Cafés Montaña pasa de valer 18,30 a 14,70 € sin que cambie su negocio.</li>
+  <li>Cuanto más lejano es el dinero que se valora, más le afecta la subida: bonos largos y empresas de crecimiento sufren más.</li>
+  <li>Las empresas endeudadas sufren además por los mayores intereses.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "Si sube el tipo sin riesgo, ¿qué le ocurre a la tasa de descuento de una empresa y a su valor?",
+    "options": ["La tasa baja y el valor sube", "La tasa sube y el valor baja", "No cambian", "La tasa sube y el valor sube"],
+    "answer": 1,
+    "why": "El tipo sin riesgo es la base del coste del capital. Si sube, los flujos futuros se descuentan más y valen menos hoy."
+  },
+  {
+    "q": "¿Por qué las empresas de crecimiento suelen caer más cuando suben los tipos?",
+    "options": ["Porque tienen más empleados", "Porque su valor depende de beneficios lejanos, que son los que más pierden al descontar con una tasa más alta", "Porque pagan más dividendos", "Porque no tienen deuda"],
+    "answer": 1,
+    "why": "Cuanto más lejos está un flujo, más se reduce su valor presente al subir la tasa. En la lección, 100 € a 20 años pierden casi un 17 % de valor con un punto más."
+  },
+  {
+    "q": "Una empresa tiene mucha deuda a tipo variable. ¿Qué le ocurre si suben los tipos?",
+    "options": ["Nada", "Paga más intereses y su beneficio baja, además de valer menos por el mayor descuento", "Su deuda desaparece", "Sus ventas suben automáticamente"],
+    "answer": 1,
+    "why": "Sufre por dos lados: mayores gastos financieros y una tasa de descuento más alta."
+  },
+  {
+    "q": "En el ejemplo de Cafés Montaña, ¿qué cambia en su negocio cuando su valor baja de 18,30 a 14,70 € por la subida de tipos?",
+    "options": ["Vende mucho menos café", "Nada en sus cafeterías: solo cambia lo que valen hoy sus beneficios futuros", "Cierra la mitad de sus locales", "Duplica su deuda"],
+    "answer": 1,
+    "why": "El negocio es el mismo. La caída de valor se debe a que el dinero futuro se descuenta con una tasa más alta."
+  }
+]
+-->
