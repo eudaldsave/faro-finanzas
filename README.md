@@ -69,7 +69,8 @@ La URL y la clave publicable de Supabase están en `faro-src/assets/auth.js`. So
 - Páginas legales: plantillas con huecos en amarillo; revisar con un profesional. Ahora la web guarda cuentas de usuario: la política de privacidad debe mencionarlo.
 - Correo de Supabase: el servicio de correo incluido solo envía a los miembros de tu organización de Supabase y con un límite bajo por hora. Configura un SMTP propio (Authentication → Emails) antes de abrir el registro al público.
 - Envío de la guía por email: solo interfaz, sin backend.
-- Curso: los módulos 1 a 3 tienen lecciones; los módulos 4 y 5 aparecen como «Próximamente».
+- Curso: los módulos 1 a 4 tienen lecciones; el módulo 5 aparece como «Próximamente».
+- Lección 9 del módulo 4 (impuestos en España): revisar los tramos y límites cada año; las normas fiscales cambian a menudo.
 
 ## Pagos
 

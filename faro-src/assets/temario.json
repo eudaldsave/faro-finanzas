@@ -68,9 +68,23 @@
       "n": 4,
       "title": "Diseña tu cartera",
       "level": "avanzado",
-      "available": false,
-      "lessonCount": 13,
-      "topics": ["Asignación de activos según tu horizonte", "Fondos indexados frente a acciones individuales", "Rebalanceo y costes"]
+      "available": true,
+      "summary": "Decide el reparto de tu cartera según tu horizonte, elige con qué productos construirla, controla costes e impuestos y mantenla con aportaciones y rebalanceo.",
+      "lessons": [
+        { "id": "m4-01", "title": "La asignación de activos: la decisión que más pesa", "minutes": 10 },
+        { "id": "m4-02", "title": "Los ladrillos de una cartera", "minutes": 12 },
+        { "id": "m4-03", "title": "Los bonos por dentro: tipos, duración y calidad", "minutes": 12 },
+        { "id": "m4-04", "title": "Un reparto para cada horizonte", "minutes": 12 },
+        { "id": "m4-05", "title": "Diversificar por países y divisas", "minutes": 11 },
+        { "id": "m4-06", "title": "Gestión activa o indexada", "minutes": 12 },
+        { "id": "m4-07", "title": "Fondos indexados, ETF y acciones: con qué construirla", "minutes": 12 },
+        { "id": "m4-08", "title": "Los costes y su efecto compuesto", "minutes": 11 },
+        { "id": "m4-09", "title": "Impuestos al invertir desde España: lo básico", "minutes": 13 },
+        { "id": "m4-10", "title": "El rebalanceo", "minutes": 11 },
+        { "id": "m4-11", "title": "Aportaciones periódicas: ¿de golpe o poco a poco?", "minutes": 11 },
+        { "id": "m4-12", "title": "Tu plan de inversión por escrito", "minutes": 11 },
+        { "id": "m4-13", "title": "Caso práctico: la cartera de Lucía a 20 años", "minutes": 14 }
+      ]
     },
     {
       "n": 5,

@@ -1,0 +1,82 @@
+<p>Una cartera se construye con pocos tipos de activos, y cada uno cumple una función distinta. Antes de decidir cuánto poner en cada uno, conviene saber qué papel juega, qué se puede esperar de él y qué riesgos tiene.</p>
+
+<h2 id="papeles">Cada activo, una función</h2>
+<table class="table--text">
+  <thead><tr><th>Activo</th><th>Su función</th><th>Su riesgo principal</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Acciones</strong></td><td>Motor de crecimiento a largo plazo: participar en los beneficios de las empresas.</td><td>Caídas fuertes y largas (módulo 3).</td></tr>
+    <tr><td><strong>Bonos de calidad</strong></td><td>Estabilizar la cartera y aportar rentas previsibles.</td><td>Subidas de tipos e inflación (lección 3).</td></tr>
+    <tr><td><strong>Liquidez</strong></td><td>Colchón para imprevistos y gastos cercanos; munición para rebalancear.</td><td>Perder poder de compra con la inflación.</td></tr>
+    <tr><td><strong>Oro</strong></td><td>Diversificar: suele moverse distinto de acciones y bonos.</td><td>Oscila mucho y no genera rentas.</td></tr>
+    <tr><td><strong>Inmobiliario cotizado</strong></td><td>Exposición a alquileres y edificios sin comprar un piso.</td><td>Se comporta bastante como la bolsa, sobre todo en crisis.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="numeros">Lo que se puede esperar de cada uno</h2>
+<p>Los supuestos del <a href="/herramientas/simulador-cartera.html">simulador de cartera</a>, que usamos en todo el curso:</p>
+<table>
+  <thead><tr><th>Activo</th><th>Rentabilidad esperada</th><th>Volatilidad</th></tr></thead>
+  <tbody>
+    <tr><td>Bolsa</td><td>7 %</td><td>17 %</td></tr>
+    <tr><td>Bonos</td><td>3 %</td><td>6 %</td></tr>
+    <tr><td>Oro</td><td>4 %</td><td>15 %</td></tr>
+    <tr><td>Liquidez</td><td>2 %</td><td>1 %</td></tr>
+  </tbody>
+</table>
+<p>Son supuestos ilustrativos, no promesas. Lo importante es el orden: más rentabilidad esperada viene con más oscilación. Y fíjate en el oro: rinde poco más que los bonos con casi tanta volatilidad como la bolsa. Entonces, ¿para qué sirve?</p>
+
+<h2 id="oro">El valor de lo que se mueve distinto</h2>
+<p>El oro tiene una correlación muy baja con la bolsa (0,05 en el simulador). Comparemos dos carteras:</p>
+<table>
+  <thead><tr><th>Cartera</th><th>Rentabilidad esperada</th><th>Volatilidad</th><th>Sharpe</th></tr></thead>
+  <tbody>
+    <tr><td>60 % bolsa, 40 % bonos</td><td>5,4 %</td><td>10,7 %</td><td>0,32</td></tr>
+    <tr><td>55 % bolsa, 35 % bonos, 10 % oro</td><td>5,3 %</td><td>10,0 %</td><td>0,33</td></tr>
+  </tbody>
+</table>
+<p>Añadir un activo volátil ha reducido la volatilidad de la cartera. Es la correlación de la lección 4 del módulo 3 en acción: lo que cuenta no es lo arriesgado que es un activo por sí solo, sino lo que aporta al conjunto. Dicho esto, el efecto es pequeño y depende de que las correlaciones del pasado se mantengan.</p>
+
+<h2 id="otros">Lo que no suele hacer falta</h2>
+<ul>
+  <li><strong>Materias primas, criptomonedas o productos complejos:</strong> muy volátiles, sin rentas y difíciles de valorar. Si los incluyes, que sea una parte pequeña y por convicción, no para diversificar.</li>
+  <li><strong>Productos estructurados o con garantías condicionadas:</strong> suelen tener costes altos y escondidos. Si no entiendes exactamente cómo ganas y cómo pierdes, no lo compres.</li>
+  <li><strong>Tu propia vivienda</strong> no forma parte de la cartera de inversión, pero sí de tu patrimonio: si ya tienes mucho en ladrillo, no hace falta añadir más.</li>
+</ul>
+<div class="callout"><strong>Las acciones de tu empresa.</strong> Si trabajas en una empresa que cotiza, tu sueldo ya depende de ella. Tener además gran parte de tus ahorros en sus acciones concentra el riesgo dos veces: si le va mal, puedes perder el empleo y los ahorros a la vez.</div>
+
+<h2 id="resumen">En resumen</h2>
+<ul>
+  <li>Acciones para crecer, bonos de calidad para estabilizar, liquidez como colchón.</li>
+  <li>Más rentabilidad esperada viene con más volatilidad.</li>
+  <li>Un activo volátil pero poco correlacionado, como el oro, puede reducir el riesgo del conjunto.</li>
+  <li>Evita lo que no entiendes y no concentres tus ahorros en la empresa donde trabajas.</li>
+</ul>
+
+<!--quiz
+[
+  {
+    "q": "¿Cuál es la función principal de los bonos de calidad en una cartera?",
+    "options": ["Ser el motor de crecimiento", "Estabilizar la cartera y aportar rentas previsibles", "Proteger siempre contra la inflación", "Multiplicar la rentabilidad"],
+    "answer": 1,
+    "why": "Los bonos de calidad oscilan menos que las acciones y se mueven de forma distinta, así que suavizan la cartera. El crecimiento a largo plazo viene sobre todo de las acciones."
+  },
+  {
+    "q": "En la lección, añadir un 10 % de oro a una cartera 60/40 reduce su volatilidad. ¿Por qué, si el oro es muy volátil?",
+    "options": ["Porque el oro siempre sube", "Porque su correlación con la bolsa es muy baja, así que aporta diversificación", "Porque el oro no tiene riesgo", "Porque reduce las comisiones"],
+    "answer": 1,
+    "why": "Lo que importa es cómo se mueve un activo respecto al resto. Si se mueve distinto, puede reducir las oscilaciones del conjunto aunque por sí solo sea volátil."
+  },
+  {
+    "q": "Trabajas en una empresa cotizada y tienes la mitad de tus ahorros en sus acciones. ¿Qué riesgo corres?",
+    "options": ["Ninguno: la conoces bien", "Un riesgo doble: si le va mal, puedes perder el empleo y parte de los ahorros a la vez", "Solo riesgo de divisa", "Riesgo de inflación"],
+    "answer": 1,
+    "why": "Tu sueldo ya depende de esa empresa. Concentrar también los ahorros en ella hace que un solo problema te afecte por dos lados."
+  },
+  {
+    "q": "Te ofrecen un producto que no entiendes del todo con una «rentabilidad garantizada si se cumplen ciertas condiciones». ¿Qué conviene hacer?",
+    "options": ["Contratarlo, porque está garantizado", "No comprarlo si no entiendes exactamente cómo ganas y cómo pierdes", "Poner todo el dinero en él", "Pedir un préstamo para comprarlo"],
+    "answer": 1,
+    "why": "Los productos complejos suelen tener costes altos y riesgos poco visibles. Si no sabes explicar en qué casos pierdes, no puedes valorar si te compensa."
+  }
+]
+-->
